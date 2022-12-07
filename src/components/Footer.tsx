@@ -8,12 +8,13 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import Paper from "@mui/material/Paper";
 import { Icon } from "@iconify/react";
+import { height } from "@mui/system";
 
 export default function Footer() {
   return (
-    <Box sx={{ pb: 7 }}>
+    <Box sx={{ height: "200" }}>
       <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        sx={{ position: "fixed", bottom: 100, left: 0, right: 0 }}
         elevation={3}
       >
         <BottomNavigation>
