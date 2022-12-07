@@ -7,7 +7,7 @@ import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import Paper from "@mui/material/Paper";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import { Icon } from "@iconify/react";
 
 export default function Footer() {
   return (
@@ -17,10 +17,22 @@ export default function Footer() {
         elevation={3}
       >
         <BottomNavigation>
-          <FacebookIcon></FacebookIcon>
-          <BottomNavigationAction label='Recents' icon={<RestoreIcon />} />
-          <BottomNavigationAction label='Favorites' icon={<FavoriteIcon />} />
-          <BottomNavigationAction label='Archive' icon={<ArchiveIcon />} />
+          <BottomNavigationAction
+            label='Facebook'
+            icon={<Icon icon='ci:facebook' width='80' height='80' />}
+          />
+          <BottomNavigationAction
+            label='Youtube'
+            icon={<Icon icon='icomoon-free:youtube' width='60' height='60' />}
+          />
+          <BottomNavigationAction
+            label='Soundcloud'
+            icon={<Icon icon='mdi:soundcloud' width='80' height='80' />}
+          />
+          <BottomNavigationAction
+            label='Spotify'
+            icon={<Icon icon='fa6-brands:spotify' width='80' height='80' />}
+          />
         </BottomNavigation>
       </Paper>
     </Box>
