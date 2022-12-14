@@ -5,6 +5,7 @@ import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Footer from "./components/Footer";
+import DrawerAppBar from "./components/DrawerAppBar";
 
 const darkTheme = createTheme({
   palette: {
@@ -16,7 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <main>This app is using the dark mode</main>
+      <DrawerAppBar />
       <Footer />
     </ThemeProvider>
   );
