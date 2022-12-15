@@ -7,10 +7,7 @@ import Link from "@mui/material/Link";
 
 export default function Footer() {
   return (
-    <Paper
-      sx={{ position: "fixed", bottom: 100, left: 0, right: 0 }}
-      elevation={3}
-    >
+    <Paper sx={{ bottom: 100, left: 0, right: 0 }} elevation={3}>
       <BottomNavigation>
         <BottomNavigationAction
           href='https://www.facebook.com/Balcosmos'
@@ -22,19 +19,25 @@ export default function Footer() {
           href='https://www.youtube.com/@balcosmos'
           target='_blank'
           label='Youtube'
-          icon={<Icon icon='icomoon-free:youtube' width='60' height='60' />}
+          icon={<Icon icon='icomoon-free:youtube' width='100' height='100' />}
         />
         <BottomNavigationAction
           href='https://soundcloud.com/balcosmos'
           target='_blank'
           label='Soundcloud'
-          icon={<Icon icon='mdi:soundcloud' width='80' height='80' />}
+          icon={<Icon icon='mdi:soundcloud' width='100' height='100' />}
         />
         <BottomNavigationAction
           href='https://open.spotify.com/artist/5wiOTsRu9iNdLAaQL2Oea3'
           target='_blank'
           label='Spotify'
-          icon={<Icon icon='fa6-brands:spotify' width='80' height='80' />}
+          icon={<Icon icon='fa6-brands:spotify' width='100' height='100' />}
+        />
+        <BottomNavigationAction
+          href='https://balcosmos.bandcamp.com/'
+          target='_blank'
+          label='Bandcamp'
+          icon={<Icon icon='tabler:brand-bandcamp' width='100' height='100' />}
         />
       </BottomNavigation>
     </Paper>
