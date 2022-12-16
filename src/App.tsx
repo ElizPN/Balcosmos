@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Music from "./components/Music";
 
 const darkTheme = createTheme({
   palette: {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/music",
+    element: <Music />,
   },
   {
     path: "/contact",
