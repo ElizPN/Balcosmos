@@ -23,7 +23,12 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Music", "About", "Contact"];
+const navItems = [
+  { name: "Home", link: "/home" },
+  { name: "Music", link: "/music" },
+  { name: "About", link: "/about" },
+  { name: "Contact", link: "/contact" },
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -41,9 +46,9 @@ export default function DrawerAppBar(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -55,12 +60,11 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex"  }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component='nav' color="transparent">
+      <AppBar component='nav' color='transparent'>
         <Toolbar>
           <IconButton
-        
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}
@@ -73,12 +77,12 @@ export default function DrawerAppBar(props: Props) {
             component='div'
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Balcosmoc
+            Balcosmos
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "white" }}>
-                {item}
+              <Button key={item.name} sx={{ color: "white" }} href={item.link}>
+                {item.name}
               </Button>
             ))}
           </Box>
