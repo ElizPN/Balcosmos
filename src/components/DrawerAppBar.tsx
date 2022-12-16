@@ -55,12 +55,12 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"  }}>
       <CssBaseline />
-      <AppBar component='nav'>
+      <AppBar component='nav' color="transparent">
         <Toolbar>
           <IconButton
-            color='inherit'
+        
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}
@@ -77,7 +77,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: "white" }}>
                 {item}
               </Button>
             ))}

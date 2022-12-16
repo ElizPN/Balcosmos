@@ -7,7 +7,7 @@ import Link from "@mui/material/Link";
 
 export default function Footer() {
   return (
-    <Paper sx={{ bottom: 100, left: 0, right: 0 }} elevation={3}>
+    <Paper sx={{  bottom: 100, left: 0, right: 0 }} elevation={3}>
       <BottomNavigation>
         <BottomNavigationAction
           href='https://www.facebook.com/Balcosmos'
