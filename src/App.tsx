@@ -9,6 +9,7 @@ import DrawerAppBar from "./components/DrawerAppBar";
 import Home from "./components/Home";
 import {
   createBrowserRouter,
+  Link,
   Route,
   RouterProvider,
   Routes,

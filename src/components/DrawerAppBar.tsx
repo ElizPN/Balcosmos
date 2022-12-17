@@ -15,6 +15,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
 
+
+
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -25,7 +27,7 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = [
-  { name: "Home", link: "/home" },
+  { name: "Home", link: "/" },
   { name: "Music", link: "/music" },
   { name: "About", link: "/about" },
   { name: "Contact", link: "/contact" },
@@ -75,14 +77,16 @@ export default function DrawerAppBar(props: Props) {
             component='div'
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <Box
-              component='img'
-              sx={{
-                height: 110,
-              }}
-              alt='LogoBalcosmos'
-              src={LogoBalcosmos}
-            />
+            <a href="./">
+              <Box
+                component='img'
+                sx={{
+                  height: 110,
+                }}
+                alt='LogoBalcosmos'
+                src={LogoBalcosmos}
+              />
+            </a>
           </Typography>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
