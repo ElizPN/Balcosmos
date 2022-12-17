@@ -23,8 +23,8 @@ function Home() {
         <Grid>
           <ReactPlayer url='https://www.youtube.com/watch?v=hO2LubLjmWw' />
         </Grid>
+        <Alboms />
       </Grid>
-      <Alboms/>
     </Box>
   );
 }
