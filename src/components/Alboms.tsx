@@ -30,7 +30,12 @@ const albomData: Albom[] = [
 
 export default function Alboms() {
   return (
-    <ImageList sx={{ width: 1200, height: 1300 }} cols={3} rowHeight={400}>
+    <ImageList
+      sx={{ width: 1200, height: 1200 }}
+      cols={3}
+      rowHeight={300}
+      gap={30}
+    >
       {albomData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -38,6 +43,7 @@ export default function Alboms() {
             srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading='lazy'
+       
           />
         </ImageListItem>
       ))}
