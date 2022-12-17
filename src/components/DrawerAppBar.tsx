@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import LogoBalcosmos from "../images/logo-balcosmos.png";
 
 interface Props {
   /**
@@ -40,10 +41,7 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant='h6' sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
+    
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
@@ -60,7 +58,7 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", alignItems: "center" }}>
       <CssBaseline />
       <AppBar component='nav' color='transparent'>
         <Toolbar>
@@ -77,8 +75,16 @@ export default function DrawerAppBar(props: Props) {
             component='div'
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Balcosmos
+            <Box
+              component='img'
+              sx={{
+                height: 110,
+              }}
+              alt='LogoBalcosmos'
+              src={LogoBalcosmos}
+            />
           </Typography>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item.name} sx={{ color: "white" }} href={item.link}>
@@ -95,7 +101,7 @@ export default function DrawerAppBar(props: Props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -108,9 +114,7 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component='main' sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
+      <Box component='main' sx={{ p: 3 }}></Box>
     </Box>
   );
 }
