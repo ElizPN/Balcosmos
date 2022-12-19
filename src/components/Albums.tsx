@@ -16,6 +16,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
+import YouTubeLogo from "../images/youtube-logo.png";
 
 interface Album {
   img: string;
@@ -110,7 +111,7 @@ const albomData: Album[] = [
 
 export default function Albums() {
   const [open, setOpen] = React.useState(false);
-  const [modalData, setModalData] = React.useState(albomData[0] || null);
+  const [modalData, setModalData] = React.useState<Album | null>(null);
 
   // const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -140,28 +141,33 @@ export default function Albums() {
             alt={item.title}
             loading='lazy'
           />
-          <StyledModal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby='modal-modal-title'
-            aria-describedby='modal-modal-description'
-          >
-            <Box sx={style}>
-              <Typography id='modal-modal-title' variant='h6' component='h2'>
-                {modalData.title}
-              </Typography>
-              <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-                <img src={modalData.img} width='200' height='200' />
-                <p>{modalData.date}</p>
-                <p>{modalData.label}</p>
-                <a href={modalData.youtube} target='_blank'>
-                  Youtube
-                </a>
-              </Typography>
-            </Box>
-          </StyledModal>
         </ImageListItem>
       ))}
+
+      <StyledModal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        {modalData !== null ? (
+          <Box sx={style}>
+            <Typography id='modal-modal-title' variant='h6' component='h2'>
+              {modalData.title}
+            </Typography>
+            <Typography id='modal-modal-description' sx={{ mt: 2 }}>
+              <img src={modalData.img} width='200' height='200' />
+              <p>{modalData.date}</p>
+              <p>{modalData.label}</p>
+              <a href={modalData.youtube} target='_blank'>
+                <img src={YouTubeLogo} width='200' height='100' />
+              </a>
+            </Typography>
+          </Box>
+        ) : (
+          <div></div>
+        )}
+      </StyledModal>
     </ImageList>
   );
 }
