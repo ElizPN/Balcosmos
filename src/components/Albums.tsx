@@ -11,12 +11,11 @@ import AlbomWinnersGreenTree from "../images/albom_winners_greenTree.jpeg";
 import AlbomWinnersSol from "../images/albom_winners_sol.jpeg";
 import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
 import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
-import { Link } from "react-router-dom";
-import YouTubeLogo from "../images/youtube-logo.png";
+import YouTubeLogo from "../images/youtube.png";
+import "../App.css";
 
 interface Album {
   img: string;
@@ -124,13 +123,13 @@ export default function Albums() {
 
   return (
     <ImageList
-      sx={{ width: 1200, height: 1200 }}
+      sx={{ width: 1200, height: 1290, padding: "15px" }}
       cols={3}
-      rowHeight={300}
+      rowHeight={400}
       gap={30}
     >
       {albomData.map((item) => (
-        <ImageListItem key={item.img}>
+        <ImageListItem key={item.img} className='shadow'>
           <img
             onClick={() => {
               setModalData(item);
@@ -160,7 +159,7 @@ export default function Albums() {
               <p>{modalData.date}</p>
               <p>{modalData.label}</p>
               <a href={modalData.youtube} target='_blank'>
-                <img src={YouTubeLogo} width='200' height='100' />
+                <img src={YouTubeLogo} width='150' height='110' />
               </a>
             </Typography>
           </Box>
