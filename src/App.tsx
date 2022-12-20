@@ -7,13 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Footer from "./components/Footer";
 import DrawerAppBar from "./components/DrawerAppBar";
 import Home from "./components/Home";
-import {
-  createBrowserRouter,
-  Link,
-  Route,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Music from "./components/Music";
@@ -21,6 +15,12 @@ import Music from "./components/Music";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    primary: {
+      main: "#000000",
+    },
+    secondary: {
+      main: "#388e3c",
+    },
   },
 });
 

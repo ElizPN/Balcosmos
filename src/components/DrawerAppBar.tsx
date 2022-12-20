@@ -14,9 +14,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
+import { styled } from "@mui/material/styles";
 
-
-
+const StyledBox = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+}));
 
 interface Props {
   /**
@@ -44,7 +46,6 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-    
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
@@ -61,10 +62,16 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
+    <Box
+      sx={{ display: "flex", alignItems: "center"}}
+    >
       <CssBaseline />
-      <AppBar component='nav' color='transparent'>
-        <Toolbar>
+      <AppBar component='nav'>
+        <Toolbar
+          sx={{
+            backgroundColor: "black",
+          }}
+        >
           <IconButton
             aria-label='open drawer'
             edge='start'
@@ -78,7 +85,7 @@ export default function DrawerAppBar(props: Props) {
             component='div'
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <a href="./">
+            <a href='./'>
               <Box
                 component='img'
                 sx={{
