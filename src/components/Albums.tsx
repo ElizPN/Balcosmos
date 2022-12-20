@@ -129,7 +129,15 @@ export default function Albums() {
       gap={30}
     >
       {albomData.map((item) => (
-        <ImageListItem key={item.img} className='shadow'>
+        <ImageListItem
+          key={item.img}
+          className='shadow'
+          sx={{
+            "&:hover": {
+              boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)"
+            },
+          }}
+        >
           <img
             onClick={() => {
               setModalData(item);
