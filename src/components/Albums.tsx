@@ -134,7 +134,9 @@ export default function Albums() {
           className='shadow'
           sx={{
             "&:hover": {
-              boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)"
+              boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
+              cursor: "pointer"
+              
             },
           }}
         >
