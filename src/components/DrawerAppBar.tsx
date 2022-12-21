@@ -62,9 +62,7 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box
-      sx={{ display: "flex", alignItems: "center"}}
-    >
+    <Box sx={{ display: "flex", alignItems: "center" }}>
       <CssBaseline />
       <AppBar component='nav'>
         <Toolbar
@@ -89,7 +87,7 @@ export default function DrawerAppBar(props: Props) {
               <Box
                 component='img'
                 sx={{
-                  height: 110,
+                  height: 130,
                 }}
                 alt='LogoBalcosmos'
                 src={LogoBalcosmos}
@@ -99,7 +97,7 @@ export default function DrawerAppBar(props: Props) {
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item.name} sx={{ color: "white" }} href={item.link}>
+              <Button key={item.name} sx={{ color: "white", fontSize: 20 }} href={item.link}>
                 {item.name}
               </Button>
             ))}
