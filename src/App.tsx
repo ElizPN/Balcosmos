@@ -34,9 +34,8 @@ function App() {
       >
         <Albums />
         <About />
-        <Listen/>
+        <Listen />
       </Grid>
-      <Footer />
     </ThemeProvider>
   );
 }

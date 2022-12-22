@@ -15,9 +15,15 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
 import { styled } from "@mui/material/styles";
+import Footer from "./Footer";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
+}));
+
+
+const StyledDiv = styled("div")(({ theme }) => ({
+  color: "white",
 }));
 
 interface Props {
@@ -108,6 +114,7 @@ export default function DrawerAppBar(props: Props) {
           </Box>
           <Typography component='main' sx={{ flexGrow: 1, p: 8 }}></Typography>
         </Toolbar>
+  <Footer/>
       </AppBar>
       <Box component='nav'>
         <Drawer
