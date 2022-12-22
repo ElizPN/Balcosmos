@@ -7,6 +7,7 @@ import DrawerAppBar from "./components/DrawerAppBar";
 import About from "./components/About";
 import Albums from "./components/Albums";
 import Grid from "@mui/material/Grid";
+import Listen from "./components/Listen";
 
 const darkTheme = createTheme({
   palette: {
@@ -33,6 +34,7 @@ function App() {
       >
         <Albums />
         <About />
+        <Listen/>
       </Grid>
       <Footer />
     </ThemeProvider>
