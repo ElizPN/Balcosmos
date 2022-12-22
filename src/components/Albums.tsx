@@ -13,9 +13,11 @@ import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import YouTubeLogo from "../images/youtube.png";
 import "../App.css";
+import Link from "@mui/material/Link";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 interface Album {
   img: string;
@@ -30,12 +32,23 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 800,
+  height: 800,
   bgcolor: "background.paper",
   border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
+  boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
+  pt: 10,
+  pl: 15,
 };
+
+const StyledImg = styled("img")(() => ({
+  border: "1px solid rgb(204 204 204 / 17%)",
+  marginTop: 15,
+}));
+
+const StyledLink = styled(Link)(() => ({
+  color: "#337ab7",
+}));
 
 const albomData: Album[] = [
   {
@@ -117,7 +130,7 @@ export default function Albums() {
 
   const StyledModal = styled(Modal)`
     .MuiBackdrop-root {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.7);
     }
   `;
 
@@ -135,8 +148,7 @@ export default function Albums() {
           sx={{
             "&:hover": {
               boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
-              cursor: "pointer"
-              
+              cursor: "pointer",
             },
           }}
         >
@@ -161,16 +173,27 @@ export default function Albums() {
       >
         {modalData !== null ? (
           <Box sx={style}>
-            <Typography id='modal-modal-title' variant='h6' component='h2'>
+            <Typography id='modal-modal-title' variant='h4' component='h2'>
               {modalData.title}
             </Typography>
-            <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-              <img src={modalData.img} width='200' height='200' />
+            <Typography
+              id='modal-modal-description'
+              sx={{ mt: 2 }}
+              variant='h6'
+            >
+              <StyledImg src={modalData.img} width='400' height='400' />
               <p>{modalData.date}</p>
               <p>{modalData.label}</p>
-              <a href={modalData.youtube} target='_blank'>
-                <img src={YouTubeLogo} width='150' height='110' />
-              </a>
+              {/* <StyledLink href={modalData.youtube} target='_blank'></StyledLink> */}
+              <Button
+              color="inherit"
+                href={modalData.youtube}
+                target='_blank'
+                variant='outlined'
+                startIcon={<YouTubeIcon />}
+              >
+                Listen on YouTube
+              </Button>
             </Typography>
           </Box>
         ) : (
