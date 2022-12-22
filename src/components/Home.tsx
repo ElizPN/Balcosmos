@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import React from "react";
 import ReactPlayer from "react-player";
-import Albums from "./Albums";
+
 
 function Home() {
   return (
@@ -23,7 +23,6 @@ function Home() {
         <Grid>
           <ReactPlayer url='https://www.youtube.com/watch?v=hO2LubLjmWw' />
         </Grid>
-        <Albums />
       </Grid>
     </Box>
   );

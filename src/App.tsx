@@ -1,16 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Footer from "./components/Footer";
 import DrawerAppBar from "./components/DrawerAppBar";
-import Home from "./components/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About";
-import Contact from "./components/Contact";
-import Music from "./components/Music";
+import Albums from "./components/Albums";
+import Grid from "@mui/material/Grid";
 
 const darkTheme = createTheme({
   palette: {
@@ -24,31 +20,20 @@ const darkTheme = createTheme({
   },
 });
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/music",
-    element: <Music />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-]);
-
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <DrawerAppBar />
-      <RouterProvider router={router} />
+      <Grid
+        container
+        justifyContent='center'
+        alignItems='center'
+        direction='column'
+      >
+        <Albums />
+        <About />
+      </Grid>
       <Footer />
     </ThemeProvider>
   );
