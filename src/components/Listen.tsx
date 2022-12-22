@@ -4,7 +4,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 
 
-function Home() {
+function Listen() {
   return (
     <Box>
       <Grid
@@ -28,4 +28,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Listen;
