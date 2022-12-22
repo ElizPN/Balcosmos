@@ -184,7 +184,6 @@ export default function Albums() {
               <StyledImg src={modalData.img} width='400' height='400' />
               <p>{modalData.date}</p>
               <p>{modalData.label}</p>
-              {/* <StyledLink href={modalData.youtube} target='_blank'></StyledLink> */}
               <Button
               color="inherit"
                 href={modalData.youtube}
