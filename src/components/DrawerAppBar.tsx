@@ -30,9 +30,9 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = [
-  { name: "Home", link: "/" },
-  { name: "Music", link: "/music" },
-  { name: "About", link: "/about" },
+  { name: "Releases", link: "/music" },
+  { name: "Biography", link: "/about" },
+  { name: "Listen", link: "/" },
   { name: "Contact", link: "/contact" },
 ];
 
