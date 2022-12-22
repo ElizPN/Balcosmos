@@ -62,7 +62,7 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
+    <Box sx={{ display: "flex", alignItems: "justify" }}>
       <CssBaseline />
       <AppBar component='nav'>
         <Toolbar
@@ -97,11 +97,16 @@ export default function DrawerAppBar(props: Props) {
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item.name} sx={{ color: "white", fontSize: 20 }} href={item.link}>
+              <Button
+                key={item.name}
+                sx={{ color: "white", fontSize: 20 }}
+                href={item.link}
+              >
                 {item.name}
               </Button>
             ))}
           </Box>
+          <Typography component='main' sx={{ flexGrow: 1, p: 8 }}></Typography>
         </Toolbar>
       </AppBar>
       <Box component='nav'>
@@ -124,7 +129,6 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component='main' sx={{ p: 3 }}></Box>
     </Box>
   );
 }
