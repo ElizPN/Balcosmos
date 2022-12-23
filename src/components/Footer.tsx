@@ -7,15 +7,17 @@ import Link from "@mui/material/Link";
 import { styled } from "@mui/material/styles";
 
 const StyledPaper = styled(Paper)(() => ({
-  bottom: 100,
   left: 0,
   right: 0,
   fontSize: 70,
 }));
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)(() => ({
-  width: 55,
+  maxWidth: 140,
   height: 55,
+  paddingTop: 0,
+  paddingBottom: 12,
+  paddingRight: 0,
 })) as typeof BottomNavigationAction;
 
 const StyledBottomNavigation = styled(BottomNavigation)(() => ({
