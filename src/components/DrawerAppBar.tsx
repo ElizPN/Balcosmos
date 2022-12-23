@@ -93,7 +93,8 @@ export default function DrawerAppBar(props: Props) {
               <Box
                 component='img'
                 sx={{
-                  height: 130,
+                  height: 140,
+                  pt: 2
                 }}
                 alt='LogoBalcosmos'
                 src={LogoBalcosmos}
