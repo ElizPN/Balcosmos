@@ -21,7 +21,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
 }));
 
-
 const StyledDiv = styled("div")(({ theme }) => ({
   color: "white",
 }));
@@ -74,6 +73,7 @@ export default function DrawerAppBar(props: Props) {
         <Toolbar
           sx={{
             backgroundColor: "black",
+            height: 100,
           }}
         >
           <IconButton
@@ -114,7 +114,7 @@ export default function DrawerAppBar(props: Props) {
           </Box>
           <Typography component='main' sx={{ flexGrow: 1, p: 8 }}></Typography>
         </Toolbar>
-  <Footer/>
+        <Footer />
       </AppBar>
       <Box component='nav'>
         <Drawer
