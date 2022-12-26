@@ -13,7 +13,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
-import { styled } from "@mui/material/styles";
 import Footer from "./Footer";
 
 interface Props {
