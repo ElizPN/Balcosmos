@@ -14,7 +14,6 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Button, styled } from "@mui/material";
-import YouTubeLogo from "../images/youtube.png";
 import "../App.css";
 import Link from "@mui/material/Link";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -44,10 +43,6 @@ const style = {
 const StyledImg = styled("img")(() => ({
   border: "1px solid rgb(204 204 204 / 17%)",
   marginTop: 15,
-}));
-
-const StyledLink = styled(Link)(() => ({
-  color: "#337ab7",
 }));
 
 const albomData: Album[] = [
@@ -185,7 +180,7 @@ export default function Albums() {
               <p>{modalData.date}</p>
               <p>{modalData.label}</p>
               <Button
-              color="inherit"
+                color='inherit'
                 href={modalData.youtube}
                 target='_blank'
                 variant='outlined'

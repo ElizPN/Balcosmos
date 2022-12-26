@@ -3,7 +3,6 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
 import { Icon } from "@iconify/react";
-import Link from "@mui/material/Link";
 import { styled } from "@mui/material/styles";
 
 const StyledPaper = styled(Paper)(() => ({

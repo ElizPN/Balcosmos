@@ -2,7 +2,6 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
@@ -16,14 +15,6 @@ import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
 import { styled } from "@mui/material/styles";
 import Footer from "./Footer";
-
-const StyledBox = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
-}));
-
-const StyledDiv = styled("div")(({ theme }) => ({
-  color: "white",
-}));
 
 interface Props {
   /**
@@ -94,7 +85,7 @@ export default function DrawerAppBar(props: Props) {
                 component='img'
                 sx={{
                   height: 140,
-                  pt: 2
+                  pt: 2,
                 }}
                 alt='LogoBalcosmos'
                 src={LogoBalcosmos}
