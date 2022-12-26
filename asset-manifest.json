@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.ff58178a.js",
+    "static/js/787.0af4a5a8.chunk.js": "/static/js/787.0af4a5a8.chunk.js",
+    "static/media/albom_spase_baby.jpeg": "/static/media/albom_spase_baby.559a111f064a3a76cc46.jpeg",
+    "static/media/albom_dharma_endpoint.jpeg": "/static/media/albom_dharma_endpoint.f871db7733e20abfc3bd.jpeg",
+    "static/media/albom_solmusic.jpeg": "/static/media/albom_solmusic.85cdb2bbd0e4507db099.jpeg",
+    "static/media/albom_solitary_oasis.jpeg": "/static/media/albom_solitary_oasis.ede1686bdb9168510bda.jpeg",
+    "static/media/albom_ministry_of_apparatus.jpeg": "/static/media/albom_ministry_of_apparatus.bddda102ba0d6df5fa33.jpeg",
+    "static/media/albom_winners_sol.jpeg": "/static/media/albom_winners_sol.0b5fa015cfcb64797803.jpeg",
+    "static/media/albom_winners_greenTree.jpeg": "/static/media/albom_winners_greenTree.52ee348dfbc8724334aa.jpeg",
+    "static/media/logo-balcosmos.png": "/static/media/logo-balcosmos.db3a99a23ada946fb063.png",
+    "static/media/albom_sacred_dope.jpeg": "/static/media/albom_sacred_dope.4056c780b62f34932918.jpeg",
+    "static/media/albom_winners_iono.jpeg": "/static/media/albom_winners_iono.5833d9253aa2a71fda3f.jpeg",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.ff58178a.js.map": "/static/js/main.ff58178a.js.map",
+    "787.0af4a5a8.chunk.js.map": "/static/js/787.0af4a5a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ff58178a.js"
+  ]
+}
