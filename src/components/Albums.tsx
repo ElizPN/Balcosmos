@@ -133,6 +133,7 @@ export default function Albums() {
       cols={3}
       rowHeight={400}
       gap={30}
+      id='releases'
     >
       {albomData.map((item) => (
         <ImageListItem

@@ -2,7 +2,6 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
-
 export default function About() {
   return (
     <Grid
@@ -11,13 +10,14 @@ export default function About() {
       alignItems='center'
       marginTop={50}
       marginBottom={60}
+      id='biography'
     >
       <Typography
         variant='body2'
         textAlign={"justify"}
         fontSize={20}
         maxWidth={900}
-        width="100%"
+        width='100%'
       >
         Originating from Ukraine, Alexey Romanov (38) is behind the solo project
         “Balcosmos”. Influenced from a vast spectre of psytrance sub-genres,
@@ -37,6 +37,3 @@ export default function About() {
     </Grid>
   );
 }
-
-
-//  sx={{ width: "100%", maxWidth: 900, textAlign: "center"  }}
