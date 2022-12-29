@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.ff58178a.js",
+    "main.js": "/static/js/main.40892f15.js",
     "static/js/787.0af4a5a8.chunk.js": "/static/js/787.0af4a5a8.chunk.js",
     "static/media/albom_spase_baby.jpeg": "/static/media/albom_spase_baby.559a111f064a3a76cc46.jpeg",
     "static/media/albom_dharma_endpoint.jpeg": "/static/media/albom_dharma_endpoint.f871db7733e20abfc3bd.jpeg",
@@ -15,11 +15,11 @@
     "static/media/albom_winners_iono.jpeg": "/static/media/albom_winners_iono.5833d9253aa2a71fda3f.jpeg",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.ff58178a.js.map": "/static/js/main.ff58178a.js.map",
+    "main.40892f15.js.map": "/static/js/main.40892f15.js.map",
     "787.0af4a5a8.chunk.js.map": "/static/js/787.0af4a5a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.ff58178a.js"
+    "static/js/main.40892f15.js"
   ]
 }
