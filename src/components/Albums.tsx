@@ -119,7 +119,6 @@ export default function Albums() {
   const [open, setOpen] = React.useState(false);
   const [modalData, setModalData] = React.useState<Album | null>(null);
 
-  // const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const StyledModal = styled(Modal)`
@@ -130,7 +129,7 @@ export default function Albums() {
 
   return (
     <ImageList
-      sx={{ width: 1200, height: 1290, padding: "15px" }}
+      sx={{ width: 1200, height: 1290, padding: "15px", mt: 25 }}
       cols={3}
       rowHeight={400}
       gap={30}
