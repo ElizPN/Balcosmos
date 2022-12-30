@@ -26,15 +26,15 @@ function Listen() {
           <ReactPlayer
             width='300px'
             height='450px'
-            url='https://www.youtube.com/watch?v=UHlkTu_xzd0'
+            url='https://soundcloud.com/balcosmos'
           />
         </Grid>
         <Grid item xs={4}>
-          <ReactPlayer
-            width='300px'
+          <iframe
+            src='https://open.spotify.com/embed/artist/5wiOTsRu9iNdLAaQL2Oea3?utm_source=generator&theme=0'
+            width='100%'
             height='450px'
-            url='https://www.youtube.com/watch?v=hO2LubLjmWw'
-          />
+          ></iframe>
         </Grid>
       </Grid>
     </Box>
