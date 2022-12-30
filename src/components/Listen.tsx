@@ -8,20 +8,33 @@ function Listen() {
     <Box>
       <Grid
         container
-        justifyContent='center'
-        alignItems='center'
-        direction='column'
+        spacing={2}
+        // justifyContent='center'
+        // alignItems='center'
+        // direction='column'
         id='listen'
       >
-        <Grid>
-          <ReactPlayer url='https://www.youtube.com/watch?v=LT910zKihSQ' />
+        <Grid item xs={4}>
+          <ReactPlayer
+            width='300px'
+            height='450px'
+            url='https://www.youtube.com/watch?v=LT910zKihSQ'
+          />
         </Grid>
 
-        <Grid>
-          <ReactPlayer url='https://www.youtube.com/watch?v=UHlkTu_xzd0' />
+        <Grid item xs={4}>
+          <ReactPlayer
+            width='300px'
+            height='450px'
+            url='https://www.youtube.com/watch?v=UHlkTu_xzd0'
+          />
         </Grid>
-        <Grid>
-          <ReactPlayer url='https://www.youtube.com/watch?v=hO2LubLjmWw' />
+        <Grid item xs={4}>
+          <ReactPlayer
+            width='300px'
+            height='450px'
+            url='https://www.youtube.com/watch?v=hO2LubLjmWw'
+          />
         </Grid>
       </Grid>
     </Box>
