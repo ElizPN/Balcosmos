@@ -15,23 +15,25 @@ function Listen() {
         id='listen'
       >
         <Grid item xs={4}>
-          <ReactPlayer
-            width='300px'
+          <iframe
+            title='YouTube'
+            width='100%'
             height='450px'
-            url='https://www.youtube.com/watch?v=LT910zKihSQ'
-          />
+            src='https://www.youtube.com/embed/LT910zKihSQ'
+          ></iframe>
         </Grid>
 
         <Grid item xs={4}>
-          <ReactPlayer
-            width='300px'
+          <iframe
+            title='Soundcloud'
+            width='100%'
             height='450px'
-            url='https://soundcloud.com/balcosmos'
-          />
+            src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1409079940&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+          ></iframe>
         </Grid>
         <Grid item xs={4}>
           <iframe
-            title='Spoify'
+            title='Spotify'
             src='https://open.spotify.com/embed/artist/5wiOTsRu9iNdLAaQL2Oea3?utm_source=generator&theme=0'
             width='100%'
             height='450px'
