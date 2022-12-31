@@ -129,7 +129,13 @@ export default function Albums() {
 
   return (
     <ImageList
-      sx={{ width: 1200, height: 1290, padding: "15px", mt: 25 }}
+      sx={{
+        columnCount: "3",
+        width: 1300,
+        mt: 25,
+        padding: 5,
+        backgroundColor: "#000000cf",
+      }}
       cols={3}
       rowHeight={400}
       gap={30}
@@ -140,6 +146,7 @@ export default function Albums() {
           key={item.img}
           className='shadow'
           sx={{
+            width: "100%",
             "&:hover": {
               boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
               cursor: "pointer",
@@ -151,8 +158,8 @@ export default function Albums() {
               setModalData(item);
               setOpen(true);
             }}
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            src={item.img}
+            srcSet={item.img}
             alt={item.title}
             loading='lazy'
           />
