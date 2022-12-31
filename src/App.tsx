@@ -30,7 +30,6 @@ function App() {
         justifyContent='center'
         alignItems='center'
         direction='column'
-        bgcolor='black'
       >
         <Albums />
         <About />
