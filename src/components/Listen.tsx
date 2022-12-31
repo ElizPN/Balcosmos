@@ -31,6 +31,7 @@ function Listen() {
         </Grid>
         <Grid item xs={4}>
           <iframe
+            title='Spoify'
             src='https://open.spotify.com/embed/artist/5wiOTsRu9iNdLAaQL2Oea3?utm_source=generator&theme=0'
             width='100%'
             height='450px'
