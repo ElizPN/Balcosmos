@@ -9,7 +9,9 @@ function Listen() {
       textAlign='center'
       sx={{ backgroundColor: "#000000cf", padding: "40px" }}
     >
-      <Typography mb={3}>LISTEN</Typography>
+      <Typography variant='h6' mb={3}>
+        LISTEN
+      </Typography>
       <Grid
         container
         spacing={2}

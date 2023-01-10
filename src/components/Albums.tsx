@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import { Button, styled } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import Container from "@mui/system/Container";
 
 interface Album {
   img: string;
@@ -128,78 +129,79 @@ export default function Albums() {
   `;
 
   return (
-    <ImageList
-      sx={{
-        columnCount: "3",
-        width: 1300,
-        mt: 25,
-        padding: 5,
-        backgroundColor: "#000000cf",
-      }}
-      cols={3}
-      rowHeight={400}
-      gap={30}
-      id='releases'
-    >
-      {albomData.map((item) => (
-        <ImageListItem
-          key={item.img}
-          className='shadow'
-          sx={{
-            width: "100%",
-            "&:hover": {
-              boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
-              cursor: "pointer",
-            },
-          }}
-        >
-          <img
-            onClick={() => {
-              setModalData(item);
-              setOpen(true);
-            }}
-            src={item.img}
-            srcSet={item.img}
-            alt={item.title}
-            loading='lazy'
-          />
-        </ImageListItem>
-      ))}
-
-      <StyledModal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby='modal-modal-title'
-        aria-describedby='modal-modal-description'
+    <Box textAlign='center' mt={25} >
+      <Typography variant='h6'>RELEASES</Typography>{" "}
+      <ImageList
+        sx={{
+          columnCount: "3",
+          width: 1300,
+          padding: 5,
+          backgroundColor: "#000000cf",
+        }}
+        cols={3}
+        rowHeight={400}
+        gap={30}
+        id='releases'
       >
-        {modalData !== null ? (
-          <Box sx={style}>
-            <Typography id='modal-modal-title' variant='h4' component='h2'>
-              {modalData.title}
-            </Typography>
-            <Typography
-              id='modal-modal-description'
-              sx={{ mt: 2 }}
-              variant='h6'
-            >
-              <StyledImg src={modalData.img} width='400' height='400' />
-              <p>{modalData.date}</p>
-              <p>{modalData.label}</p>
-              <Button
-                color='inherit'
-                href={modalData.youtube}
-                target='_blank'
-                variant='outlined'
-                startIcon={<YouTubeIcon />}
+        {albomData.map((item) => (
+          <ImageListItem
+            key={item.img}
+            className='shadow'
+            sx={{
+              width: "100%",
+              "&:hover": {
+                boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
+                cursor: "pointer",
+              },
+            }}
+          >
+            <img
+              onClick={() => {
+                setModalData(item);
+                setOpen(true);
+              }}
+              src={item.img}
+              srcSet={item.img}
+              alt={item.title}
+              loading='lazy'
+            />
+          </ImageListItem>
+        ))}
+        <StyledModal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby='modal-modal-title'
+          aria-describedby='modal-modal-description'
+        >
+          {modalData !== null ? (
+            <Box sx={style}>
+              <Typography id='modal-modal-title' variant='h4' component='h2'>
+                {modalData.title}
+              </Typography>
+              <Typography
+                id='modal-modal-description'
+                sx={{ mt: 2 }}
+                variant='h6'
               >
-                Listen on YouTube
-              </Button>
-            </Typography>
-          </Box>
-        ) : (
-          <div></div>
-        )}
-      </StyledModal>
-    </ImageList>
+                <StyledImg src={modalData.img} width='400' height='400' />
+                <p>{modalData.date}</p>
+                <p>{modalData.label}</p>
+                <Button
+                  color='inherit'
+                  href={modalData.youtube}
+                  target='_blank'
+                  variant='outlined'
+                  startIcon={<YouTubeIcon />}
+                >
+                  Listen on YouTube
+                </Button>
+              </Typography>
+            </Box>
+          ) : (
+            <div></div>
+          )}
+        </StyledModal>
+      </ImageList>
+    </Box>
   );
 }
