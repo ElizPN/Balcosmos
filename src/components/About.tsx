@@ -1,29 +1,39 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
+import { styled } from "@mui/material";
+
+const StyledGridContainer = styled(Grid)(() => ({
+  justifyContent: "center",
+  alignItems: "center",
+  marginTop: 50,
+  marginBottom: 60,
+  scrollMarginTop: "200px",
+}));
+
+const StyledGridItem = styled(Grid)(() => ({
+  backgroundColor: "#000000cf",
+  padding: "40px",
+}));
+
+const StyledTypographyTitle = styled(Typography)(() => ({
+  fontWeight: "bold",
+  textAlign: "center",
+  marginBottom: 10,
+}));
+
+const StyledTypographyBody = styled(Typography)(() => ({
+  textAlign: "justify",
+  maxWidth: 900,
+  width: "100%",
+}));
 
 export default function About() {
   return (
-    <Grid
-      container
-      justifyContent='center'
-      alignItems='center'
-      marginTop={50}
-      marginBottom={60}
-      id='biography'
-      sx={{ scrollMarginTop: "200px" }}
-    >
-      <Grid item sx={{ backgroundColor: "#000000cf", padding: "40px" }}>
-        <Typography fontWeight='bold' textAlign='center' variant='h5' mb={3}>
-          BIOGRAPHY
-        </Typography>
-        <Typography
-          variant='body2'
-          textAlign={"justify"}
-          maxWidth={900}
-          width='100%'
-        >
+    <StyledGridContainer container id='biography'>
+      <StyledGridItem item>
+        <StyledTypographyTitle variant='h5'>BIOGRAPHY</StyledTypographyTitle>
+        <StyledTypographyBody variant='body2'>
           <Typography>
             Originating from Ukraine, Alexey Romanov (38) is behind the solo
             project “Balcosmos”. Influenced from a vast spectre of psytrance
@@ -45,8 +55,8 @@ export default function About() {
             psytrance labels, like IONO records, SOL Music and GreenTree
             Records.
           </Typography>
-        </Typography>
-      </Grid>
-    </Grid>
+        </StyledTypographyBody>
+      </StyledGridItem>
+    </StyledGridContainer>
   );
 }
