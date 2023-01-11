@@ -12,6 +12,7 @@ export default function About() {
       marginTop={50}
       marginBottom={60}
       id='biography'
+      sx={{ scrollMarginTop: "200px" }}
     >
       <Grid item sx={{ backgroundColor: "#000000cf", padding: "40px" }}>
         <Typography fontWeight='bold' textAlign='center' variant='h5' mb={3}>

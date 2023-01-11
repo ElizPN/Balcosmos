@@ -133,9 +133,14 @@ export default function Albums() {
       textAlign='center'
       mt={25}
       pt={5}
-      sx={{ backgroundColor: "#000000cf" }}
+      sx={{ backgroundColor: "#000000cf", scrollMarginTop: "500px" }}
+      id='releases'
     >
-      <Typography variant='h5' fontWeight='bold'>
+      <Typography
+        variant='h5'
+        fontWeight='bold'
+        sx={{ scrollMarginTop: "100px" }}
+      >
         RELEASES
       </Typography>{" "}
       <ImageList
@@ -149,7 +154,6 @@ export default function Albums() {
         cols={3}
         rowHeight={400}
         gap={30}
-        id='releases'
       >
         {albomData.map((item) => (
           <ImageListItem

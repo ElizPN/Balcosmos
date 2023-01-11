@@ -7,7 +7,7 @@ function Listen() {
   return (
     <Box
       textAlign='center'
-      sx={{ backgroundColor: "#000000cf", padding: "40px" }}
+      sx={{ backgroundColor: "#000000cf", padding: "40px", mb: "100px" }}
     >
       <Typography fontWeight='bold' variant='h5' mb={3}>
         LISTEN
@@ -18,6 +18,7 @@ function Listen() {
         alignItems='center'
         direction='row'
         id='listen'
+        sx={{ scrollMarginTop: "300px" }}
       >
         <Grid item xs={4}>
           <iframe
