@@ -9,7 +9,7 @@ function Listen() {
       textAlign='center'
       sx={{ backgroundColor: "#000000cf", padding: "40px" }}
     >
-      <Typography variant='h5' mb={3}>
+      <Typography fontWeight='bold' variant='h5' mb={3}>
         LISTEN
       </Typography>
       <Grid

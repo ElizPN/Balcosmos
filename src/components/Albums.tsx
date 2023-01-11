@@ -129,14 +129,22 @@ export default function Albums() {
   `;
 
   return (
-    <Box textAlign='center' mt={25}>
-      <Typography variant='h5'>RELEASES</Typography>{" "}
+    <Box
+      textAlign='center'
+      mt={25}
+      pt={5}
+      sx={{ backgroundColor: "#000000cf" }}
+    >
+      <Typography variant='h5' fontWeight='bold'>
+        RELEASES
+      </Typography>{" "}
       <ImageList
         sx={{
           columnCount: "3",
           width: 1300,
           padding: 5,
           backgroundColor: "#000000cf",
+          mt: "25px",
         }}
         cols={3}
         rowHeight={400}

@@ -14,7 +14,7 @@ export default function About() {
       id='biography'
     >
       <Grid item sx={{ backgroundColor: "#000000cf", padding: "40px" }}>
-        <Typography textAlign='center' variant='h5' mb={3}>
+        <Typography fontWeight='bold' textAlign='center' variant='h5' mb={3}>
           BIOGRAPHY
         </Typography>
         <Typography
