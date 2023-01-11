@@ -13,7 +13,7 @@ import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, styled } from "@mui/material";
+import { Button, Card, Grid, styled } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
@@ -132,34 +132,33 @@ export default function Albums() {
       textAlign='center'
       mt={25}
       pt={5}
-      sx={{ backgroundColor: "#000000cf", scrollMarginTop: "500px" }}
+      sx={{
+        backgroundColor: "#000000cf",
+        scrollMarginTop: "500px",
+        width: "90%",
+      }}
       id='releases'
     >
-      <Typography
-        variant='h5'
-        fontWeight='bold'
-        sx={{ scrollMarginTop: "100px" }}
-      >
+      <Typography variant='h5' fontWeight='bold'>
         RELEASES
       </Typography>{" "}
-      <ImageList
+      <Grid
+        container
         sx={{
-          columnCount: "3",
-          width: 1300,
-          padding: 5,
           backgroundColor: "#000000cf",
           mt: "25px",
         }}
-        cols={3}
-        rowHeight={400}
-        gap={30}
+        // gap={1}
       >
         {albomData.map((item) => (
-          <ImageListItem
+          <Grid
+            item
+            xs={6}
+            md={4}
+            lg={4}
             key={item.img}
             className='shadow'
             sx={{
-              width: "100%",
               "&:hover": {
                 boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
                 cursor: "pointer",
@@ -175,8 +174,10 @@ export default function Albums() {
               srcSet={item.img}
               alt={item.title}
               loading='lazy'
+              width='100%'
+              height='100%'
             />
-          </ImageListItem>
+          </Grid>
         ))}
         <StyledModal
           open={open}
@@ -212,7 +213,7 @@ export default function Albums() {
             <div></div>
           )}
         </StyledModal>
-      </ImageList>
+      </Grid>
     </Box>
   );
 }
