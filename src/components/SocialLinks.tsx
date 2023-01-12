@@ -23,7 +23,7 @@ const StyledBottomNavigation = styled(BottomNavigation)(() => ({
   backgroundColor: "black",
 }));
 
-export default function Footer() {
+export default function SocialLinks() {
   return (
     <StyledPaper elevation={3}>
       <StyledBottomNavigation>
