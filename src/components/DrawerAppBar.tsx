@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
 import SocialLinks from "./SocialLinks";
-import { styled } from "@mui/material";
+import { Grid, styled } from "@mui/material";
 
 const StyledBoxContainer = styled(Box)(() => ({
   alignItems: "justify",
@@ -101,6 +101,25 @@ export default function DrawerAppBar(props: Props) {
             </a>
           </Typography>
 
+          <Grid
+            container
+            direction='column'
+            alignItems='center'
+            justifyContent='center'
+            paddingBottom={2}
+            sx={{ display: { xs: "flex", sm: "none" } }}
+          >
+            <Grid item xs={12}>
+              <a href='./'>
+                <StyledBoxLogo
+                  component='img'
+                  alt='LogoBalcosmos'
+                  src={LogoBalcosmos}
+                />
+              </a>
+            </Grid>
+          </Grid>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <StyledButton key={item.name} href={item.link}>
@@ -108,7 +127,10 @@ export default function DrawerAppBar(props: Props) {
               </StyledButton>
             ))}
           </Box>
-          <Typography component='main' sx={{ flexGrow: 1, p: 8 }}></Typography>
+          <Typography
+            component='main'
+            sx={{ flexGrow: 1, p: 8, display: { xs: "none", sm: "block" } }}
+          ></Typography>
         </StyledToolbar>
         <SocialLinks />
       </AppBar>
