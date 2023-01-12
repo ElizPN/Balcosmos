@@ -1,6 +1,4 @@
 import * as React from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 import AlbomDharma from "../images/albom_dharma_endpoint.jpeg";
 import AlbomMinistry from "../images/albom_ministry_of_apparatus.jpeg";
 import AlbomSacred from "../images/albom_sacred_dope.jpeg";
@@ -13,10 +11,9 @@ import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, Card, Unstable_Grid2, styled, Link } from "@mui/material";
+import { Button, Unstable_Grid2, styled, Link } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { textAlign } from "@mui/system";
 
 interface Album {
   img: string;
@@ -45,7 +42,6 @@ const StyledImg = styled("img")(() => ({
     boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
     cursor: "pointer",
   },
-
 }));
 
 const StyledBoxContainer = styled(Box)(() => ({
@@ -141,19 +137,17 @@ const albomData: Album[] = [
   },
 ];
 
- const StyledModal = styled(Modal)`
-   .MuiBackdrop-root {
-     background-color: rgba(0, 0, 0, 0.7);
-   }
- `;
+const StyledModal = styled(Modal)`
+  .MuiBackdrop-root {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+`;
 
 export default function Albums() {
   const [open, setOpen] = React.useState(false);
   const [modalData, setModalData] = React.useState<Album | null>(null);
 
   const handleClose = () => setOpen(false);
-
- 
 
   return (
     <StyledBoxContainer id='releases'>
