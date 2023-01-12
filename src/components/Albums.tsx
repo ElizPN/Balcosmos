@@ -13,7 +13,7 @@ import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, Card, Grid, styled } from "@mui/material";
+import { Button, Card, Unstable_Grid2, styled } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
@@ -40,8 +40,10 @@ const style = {
 };
 
 const StyledImg = styled("img")(() => ({
-  border: "1px solid rgb(204 204 204 / 17%)",
-  marginTop: 15,
+  "&:hover": {
+    boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
+    cursor: "pointer",
+  },
 }));
 
 const albomData: Album[] = [
@@ -131,7 +133,7 @@ export default function Albums() {
     <Box
       textAlign='center'
       mt={25}
-      pt={5}
+      p={10}
       sx={{
         backgroundColor: "#000000cf",
         scrollMarginTop: "500px",
@@ -142,30 +144,17 @@ export default function Albums() {
       <Typography variant='h5' fontWeight='bold'>
         RELEASES
       </Typography>{" "}
-      <Grid
+      <Unstable_Grid2
         container
         sx={{
           backgroundColor: "#000000cf",
           mt: "25px",
         }}
-        // gap={1}
+        spacing={5}
       >
         {albomData.map((item) => (
-          <Grid
-            item
-            xs={6}
-            md={4}
-            lg={4}
-            key={item.img}
-            className='shadow'
-            sx={{
-              "&:hover": {
-                boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
-                cursor: "pointer",
-              },
-            }}
-          >
-            <img
+          <Unstable_Grid2 xs={12} sm={12} md={6} lg={4} key={item.img}>
+            <StyledImg
               onClick={() => {
                 setModalData(item);
                 setOpen(true);
@@ -177,7 +166,7 @@ export default function Albums() {
               width='100%'
               height='100%'
             />
-          </Grid>
+          </Unstable_Grid2>
         ))}
         <StyledModal
           open={open}
@@ -213,7 +202,7 @@ export default function Albums() {
             <div></div>
           )}
         </StyledModal>
-      </Grid>
+      </Unstable_Grid2>
     </Box>
   );
 }
