@@ -140,17 +140,19 @@ const albomData: Album[] = [
   },
 ];
 
+ const StyledModal = styled(Modal)`
+   .MuiBackdrop-root {
+     background-color: rgba(0, 0, 0, 0.7);
+   }
+ `;
+
 export default function Albums() {
   const [open, setOpen] = React.useState(false);
   const [modalData, setModalData] = React.useState<Album | null>(null);
 
   const handleClose = () => setOpen(false);
 
-  const StyledModal = styled(Modal)`
-    .MuiBackdrop-root {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-  `;
+ 
 
   return (
     <StyledBoxContainer id='releases'>
