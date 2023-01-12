@@ -20,7 +20,7 @@ function Listen() {
         id='listen'
         sx={{ scrollMarginTop: "300px" }}
       >
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={12} md={4} lg={4}>
           <iframe
             title='YouTube'
             width='100%'
@@ -29,7 +29,7 @@ function Listen() {
           ></iframe>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={12} md={4} lg={4}>
           <iframe
             title='Soundcloud'
             width='100%'
@@ -37,7 +37,7 @@ function Listen() {
             src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1548380725&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
           ></iframe>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={12} md={4} lg={4}>
           <iframe
             title='Spotify'
             src='https://open.spotify.com/embed/artist/5wiOTsRu9iNdLAaQL2Oea3?utm_source=generator&theme=0'
