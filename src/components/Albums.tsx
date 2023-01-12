@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import { Button, Card, Unstable_Grid2, styled } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import { textAlign } from "@mui/system";
 
 interface Album {
   img: string;
@@ -44,6 +45,28 @@ const StyledImg = styled("img")(() => ({
     boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
     cursor: "pointer",
   },
+}));
+
+const StyledBoxContainer = styled(Box)(() => ({
+  backgroundColor: "#000000cf",
+  scrollMarginTop: "500px",
+  width: "90%",
+  paddingTop: 20,
+  paddingBottom: 30,
+  paddingLeft: 35,
+  paddingRight: 35,
+  marginTop: 200,
+  textAlign: "center",
+}));
+
+const StyledTypography = styled(Typography)(() => ({
+  fontWeight: "bold",
+  paddingTop: 15,
+}));
+
+const StyledGridContainer = styled(Unstable_Grid2)(() => ({
+  backgroundColor: "#000000cf",
+  marginTop: 25,
 }));
 
 const albomData: Album[] = [
@@ -130,28 +153,9 @@ export default function Albums() {
   `;
 
   return (
-    <Box
-      textAlign='center'
-      mt={25}
-      p={10}
-      sx={{
-        backgroundColor: "#000000cf",
-        scrollMarginTop: "500px",
-        width: "90%",
-      }}
-      id='releases'
-    >
-      <Typography variant='h5' fontWeight='bold'>
-        RELEASES
-      </Typography>{" "}
-      <Unstable_Grid2
-        container
-        sx={{
-          backgroundColor: "#000000cf",
-          mt: "25px",
-        }}
-        spacing={5}
-      >
+    <StyledBoxContainer id='releases'>
+      <StyledTypography variant='h5'>RELEASES</StyledTypography>
+      <StyledGridContainer container spacing={5}>
         {albomData.map((item) => (
           <Unstable_Grid2 xs={12} sm={12} md={6} lg={4} key={item.img}>
             <StyledImg
@@ -202,7 +206,7 @@ export default function Albums() {
             <div></div>
           )}
         </StyledModal>
-      </Unstable_Grid2>
-    </Box>
+      </StyledGridContainer>
+    </StyledBoxContainer>
   );
 }
