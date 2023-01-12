@@ -1,25 +1,30 @@
-import { Typography } from "@mui/material";
+import { styled, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import React from "react";
 
+const StyledBoxContainer = styled(Box)(() => ({
+  backgroundColor: "#000000cf",
+  padding: 40,
+  marginBottom: 100,
+  textAlign: "center",
+}));
+
+const StyledTypography = styled(Typography)(() => ({
+  fontWeight: "bold",
+  marginBottom: 30,
+}));
+
+const StyledGridContainer = styled(Grid)(() => ({
+  scrollMarginTop: "300px",
+  alignItems: "center",
+}));
+
 function Listen() {
   return (
-    <Box
-      textAlign='center'
-      sx={{ backgroundColor: "#000000cf", padding: "40px", mb: "100px" }}
-    >
-      <Typography fontWeight='bold' variant='h5' mb={3}>
-        LISTEN
-      </Typography>
-      <Grid
-        container
-        spacing={2}
-        alignItems='center'
-        direction='row'
-        id='listen'
-        sx={{ scrollMarginTop: "300px" }}
-      >
+    <StyledBoxContainer>
+      <StyledTypography variant='h5'>LISTEN</StyledTypography>
+      <StyledGridContainer container  spacing={2} id='listen'>
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <iframe
             title='YouTube'
@@ -45,8 +50,8 @@ function Listen() {
             height='450px'
           ></iframe>
         </Grid>
-      </Grid>
-    </Box>
+      </StyledGridContainer>
+    </StyledBoxContainer>
   );
 }
 
