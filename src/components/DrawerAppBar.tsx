@@ -13,13 +13,33 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
-import Footer from "./Footer";
+import SocialLinks from "./SocialLinks";
+import { styled } from "@mui/material";
+
+const StyledBoxContainer = styled(Box)(() => ({
+  alignItems: "justify",
+}));
+
+const StyledToolbar = styled(Toolbar)(() => ({
+  backgroundColor: "black",
+  height: 100,
+}));
+
+const StyledIconButton = styled(IconButton)(() => ({
+  marginRight: 2,
+}));
+
+const StyledBoxLogo = styled(Box)(() => ({
+  height: 140,
+  paddingTop: 20,
+})) as typeof Box;
+
+const StyledButton = styled(Button)(() => ({
+  color: "white",
+  fontSize: 20,
+}));
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
@@ -57,35 +77,24 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", alignItems: "justify" }}>
+    <StyledBoxContainer>
       <CssBaseline />
       <AppBar component='nav'>
-        <Toolbar
-          sx={{
-            backgroundColor: "black",
-            height: 100,
-          }}
-        >
-          <IconButton
-            aria-label='open drawer'
-            edge='start'
+        <StyledToolbar>
+          <StyledIconButton
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ display: { sm: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
+          </StyledIconButton>
           <Typography
             variant='h6'
             component='div'
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
             <a href='./'>
-              <Box
+              <StyledBoxLogo
                 component='img'
-                sx={{
-                  height: 140,
-                  pt: 2,
-                }}
                 alt='LogoBalcosmos'
                 src={LogoBalcosmos}
               />
@@ -94,18 +103,14 @@ export default function DrawerAppBar(props: Props) {
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button
-                key={item.name}
-                sx={{ color: "white", fontSize: 20 }}
-                href={item.link}
-              >
+              <StyledButton key={item.name} href={item.link}>
                 {item.name}
-              </Button>
+              </StyledButton>
             ))}
           </Box>
           <Typography component='main' sx={{ flexGrow: 1, p: 8 }}></Typography>
-        </Toolbar>
-        <Footer />
+        </StyledToolbar>
+        <SocialLinks />
       </AppBar>
       <Box component='nav'>
         <Drawer
@@ -127,6 +132,6 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-    </Box>
+    </StyledBoxContainer>
   );
 }
