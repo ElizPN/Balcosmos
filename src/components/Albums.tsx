@@ -13,7 +13,7 @@ import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, Card, Unstable_Grid2, styled } from "@mui/material";
+import { Button, Card, Unstable_Grid2, styled, Link } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { textAlign } from "@mui/system";
@@ -45,6 +45,7 @@ const StyledImg = styled("img")(() => ({
     boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
     cursor: "pointer",
   },
+
 }));
 
 const StyledBoxContainer = styled(Box)(() => ({
@@ -190,7 +191,9 @@ export default function Albums() {
                 sx={{ mt: 2 }}
                 variant='h6'
               >
-                <StyledImg src={modalData.img} width='400' height='400' />
+                <Link href={modalData.youtube}>
+                  <StyledImg src={modalData.img} width='400' height='400' />
+                </Link>
                 <p>{modalData.date}</p>
                 <p>{modalData.label}</p>
                 <Button
