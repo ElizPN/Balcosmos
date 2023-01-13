@@ -64,7 +64,7 @@ export default function DrawerAppBar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton href={item.link} sx={{ textAlign: "center" }}>
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -140,9 +140,9 @@ export default function DrawerAppBar(props: Props) {
           variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
+          // ModalProps={{
+          //   keepMounted: true,
+          // }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
