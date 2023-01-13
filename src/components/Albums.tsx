@@ -65,6 +65,9 @@ const StyledGridContainer = styled(Unstable_Grid2)(() => ({
   backgroundColor: "#000000cf",
   marginTop: 25,
 }));
+const StyledGridItem = styled(Unstable_Grid2)(() => ({
+
+}));
 
 const albomData: Album[] = [
   {
@@ -154,7 +157,7 @@ export default function Albums() {
       <StyledTypography variant='h5'>RELEASES</StyledTypography>
       <StyledGridContainer container spacing={5}>
         {albomData.map((item) => (
-          <Unstable_Grid2 xs={12} sm={12} md={6} lg={4} key={item.img}>
+          <StyledGridItem xs={12} sm={12} md={6} lg={4} key={item.img}>
             <StyledImg
               onClick={() => {
                 setModalData(item);
@@ -167,7 +170,7 @@ export default function Albums() {
               width='100%'
               height='100%'
             />
-          </Unstable_Grid2>
+          </StyledGridItem>
         ))}
         <StyledModal
           open={open}
