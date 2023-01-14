@@ -7,6 +7,7 @@ import About from "./components/About";
 import Albums from "./components/Albums";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
+import ContactForm from "./components/ContactForm";
 
 const darkTheme = createTheme({
   palette: {
@@ -34,6 +35,7 @@ function App() {
         <Albums />
         <About />
         <Listen />
+        <ContactForm />
       </Grid>
     </ThemeProvider>
   );
