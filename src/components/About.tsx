@@ -1,7 +1,7 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material";
+import { Box, Card, styled } from "@mui/material";
 
 const StyledGridContainer = styled(Grid)(() => ({
   justifyContent: "center",
@@ -22,7 +22,7 @@ const StyledTypographyTitle = styled(Typography)(() => ({
   marginBottom: 10,
 }));
 
-const StyledTypographyBody = styled(Typography)(() => ({
+const StyledBodyBox = styled(Box)(() => ({
   textAlign: "justify",
   maxWidth: 900,
   width: "100%",
@@ -33,7 +33,7 @@ export default function About() {
     <StyledGridContainer container id='biography'>
       <StyledGridItem item>
         <StyledTypographyTitle variant='h5'>BIOGRAPHY</StyledTypographyTitle>
-        <StyledTypographyBody variant='body2'>
+        <StyledBodyBox>
           <Typography>
             Originating from Ukraine, Alexey Romanov (38) is behind the solo
             project “Balcosmos”. Influenced from a vast spectre of psytrance
@@ -55,7 +55,7 @@ export default function About() {
             psytrance labels, like IONO records, SOL Music and GreenTree
             Records.
           </Typography>
-        </StyledTypographyBody>
+        </StyledBodyBox>
       </StyledGridItem>
     </StyledGridContainer>
   );
