@@ -1,3 +1,8 @@
+import { TextareaAutosize, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Input from "@mui/material/Input";
 import React from "react";
 
 function ContactForm() {
@@ -25,16 +30,37 @@ function ContactForm() {
   };
 
   return (
-    <div className='App'>
+    <Container>
       <h1>React File Upload Form</h1>
-      <form onSubmit={onSubmit}>
-        <input type='text' name='name' />
-        <input type='email' name='email' />
-        <textarea name='message'></textarea>
-        <input type='submit' />
-      </form>
+
+      <Grid
+        container
+        component='form'
+        onSubmit={onSubmit}
+        direction='column'
+        spacing={7}
+        sx={{ backgroundColor: "#000000cf", direction: "column" }}
+      >
+        <Grid item>
+          <Input placeholder='John Doe' />
+        </Grid>
+        <Grid item>
+          <Input placeholder='your@company.com' />
+        </Grid>
+        <Grid item>
+          <TextareaAutosize
+            aria-label='Your message'
+            minRows={5}
+            placeholder='Your message'
+            style={{ width: 200 }}
+          />
+        </Grid>
+        <Grid item>
+          <input type='submit' />
+        </Grid>
+      </Grid>
       <span>{result}</span>
-    </div>
+    </Container>
   );
 }
 
