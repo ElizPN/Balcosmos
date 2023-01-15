@@ -1,7 +1,7 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Box, Card, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 
 const StyledGridContainer = styled(Grid)(() => ({
   justifyContent: "center",
