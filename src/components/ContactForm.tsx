@@ -1,9 +1,20 @@
-import { TextareaAutosize, TextField } from "@mui/material";
+import {
+  Button,
+  styled,
+  TextareaAutosize,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Input from "@mui/material/Input";
 import React from "react";
+
+const StyledTypography = styled(Typography)(() => ({
+  fontWeight: "bold",
+  marginBottom: 70,
+}));
 
 function ContactForm() {
   const [result, setResult] = React.useState("");
@@ -30,8 +41,19 @@ function ContactForm() {
   };
 
   return (
-    <Container>
-      <h1>React File Upload Form</h1>
+    <Container
+      sx={{
+        backgroundColor: "#000000cf",
+        direction: "column",
+        marginBottom: 50,
+        textAlign: "center",
+        paddingBottom: 20,
+        paddingTop: 5,
+        paddingLeft: 20,
+        paddingRight: 20,
+      }}
+    >
+      <StyledTypography variant='h5'>CONTACT</StyledTypography>
 
       <Grid
         container
@@ -39,27 +61,50 @@ function ContactForm() {
         onSubmit={onSubmit}
         direction='column'
         spacing={7}
-        sx={{ backgroundColor: "#000000cf", direction: "column" }}
       >
         <Grid item>
-          <Input placeholder='John Doe' />
-        </Grid>
-        <Grid item>
-          <Input placeholder='your@company.com' />
-        </Grid>
-        <Grid item>
+          <Typography mb={2} variant='h5'>
+            Your name
+          </Typography>
           <TextareaAutosize
-            aria-label='Your message'
-            minRows={5}
-            placeholder='Your message'
-            style={{ width: 200 }}
+            minRows={3}
+            style={{ width: "50%", borderRadius: 5 }}
+            placeholder='John Doe'
+            name='name'
           />
         </Grid>
         <Grid item>
-          <input type='submit' />
+          <Typography mb={2} variant='h5'>
+            Your email
+          </Typography>
+          <TextareaAutosize
+            minRows={3}
+            style={{ width: "50%", borderRadius: 5 }}
+            placeholder='your@company.com'
+            name='email'
+          />
+        </Grid>
+        <Grid item>
+          <Typography mb={2} variant='h5'>
+            Message
+          </Typography>
+          <TextareaAutosize
+            aria-label='Your message'
+            minRows={10}
+            placeholder='Your message'
+            name='message'
+            style={{ width: 400, borderRadius: 5 }}
+          />
+        </Grid>
+        <Grid item>
+          <Button variant='contained' type='submit'>
+            Submit
+          </Button>
+        </Grid>
+        <Grid item>
+          <Typography>{result}</Typography>
         </Grid>
       </Grid>
-      <span>{result}</span>
     </Container>
   );
 }
