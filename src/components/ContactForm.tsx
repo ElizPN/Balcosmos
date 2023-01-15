@@ -42,11 +42,12 @@ function ContactForm() {
 
   return (
     <Container
-
+      id='contact'
       sx={{
         backgroundColor: "#000000cf",
         direction: "column",
         marginBottom: 50,
+        scrollMarginTop: 200,
         textAlign: "center",
         paddingBottom: 20,
         paddingTop: 5,
@@ -98,7 +99,12 @@ function ContactForm() {
           />
         </Grid>
         <Grid item>
-          <Button color='success' size='large' variant='contained' type='submit'>
+          <Button
+            color='success'
+            size='large'
+            variant='contained'
+            type='submit'
+          >
             Submit
           </Button>
         </Grid>
