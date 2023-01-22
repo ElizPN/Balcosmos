@@ -28,13 +28,14 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 800,
-  height: 800,
+  width: { xs: "90%", md: "50%", lg: "50%" },
+
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
   pt: 10,
   pl: 15,
+ 
 };
 
 const StyledImg = styled("img")(() => ({
@@ -65,9 +66,7 @@ const StyledGridContainer = styled(Unstable_Grid2)(() => ({
   backgroundColor: "#000000cf",
   marginTop: 25,
 }));
-const StyledGridItem = styled(Unstable_Grid2)(() => ({
-
-}));
+const StyledGridItem = styled(Unstable_Grid2)(() => ({}));
 
 const albomData: Album[] = [
   {
