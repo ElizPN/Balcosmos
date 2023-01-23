@@ -28,14 +28,13 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: { xs: "90%", md: "50%", lg: "50%" },
-
+  width: { xs: "90%", md: "50%", lg: "35%" },
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
   pt: 10,
   pl: 15,
- 
+  p: 10,
 };
 
 const StyledImg = styled("img")(() => ({
@@ -188,7 +187,17 @@ export default function Albums() {
                 variant='h6'
               >
                 <Link href={modalData.youtube}>
-                  <StyledImg src={modalData.img} width='400' height='400' />
+                  <StyledImg
+                    src={modalData.img}
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        s: "400px",
+                        md: "100%",
+                        lg: "400px",
+                      },
+                    }}
+                  />
                 </Link>
                 <p>{modalData.date}</p>
                 <p>{modalData.label}</p>
