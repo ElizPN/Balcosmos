@@ -72,45 +72,46 @@ const albomData: Album[] = [
     img: AlbomDharma,
     title: "Dharma endpoint",
     date: "Released September 19, 2021",
-    label: "Balcosmos",
+    label: "Label - Balcosmos",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
-  },
-  {
-    img: AlbomMinistry,
-    title: "Pleasure Controller",
-    date: "Released November 17, 2022",
-    label: "Label UP!NOIZE Records",
-    youtube: "https://www.youtube.com/watch?v=WtwFV5bYviI",
-  },
-  {
-    img: AlbomSacred,
-    title: "AlbomSacred",
-    date: "Released March 26, 2021",
-    label: "Balcosmos",
-    youtube:
-      "https://www.youtube.com/playlist?list=PLKf7fie1PLSbgKS4RFN0xCLONCzlhynw8",
   },
   {
     img: AlbomSolitary,
     title: "Solitary Oasis",
     date: "Release Date: January 6 2023",
-    label: "Label: GreenTree Records",
+    label: "Label - GreenTree Records",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
+  },
+
+  {
+    img: AlbomSacred,
+    title: "AlbomSacred",
+    date: "Released March 26, 2021",
+    label: "Label - Balcosmos",
+    youtube:
+      "https://www.youtube.com/playlist?list=PLKf7fie1PLSbgKS4RFN0xCLONCzlhynw8",
+  },
+  {
+    img: AlbomMinistry,
+    title: "Pleasure Controller",
+    date: "Released November 17, 2022",
+    label: "Label - UP!NOIZE Records",
+    youtube: "https://www.youtube.com/watch?v=WtwFV5bYviI",
   },
   {
     img: AlbomSpaseBaby,
     title: "Ringing blizzard",
     date: "Released November 10, 2021",
-    label: "Space Baby Records",
+    label: "Label - Space Baby Records",
     youtube: "https://www.youtube.com/watch?v=LT910zKihSQ",
   },
   {
     img: AlbomSolmusic,
     title: "Projection Of Reality ",
     date: "Released August 26, 2022",
-    label: "Label: Sol Music",
+    label: "Label - Sol Music",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSZalWJpEogk9yZ_yBOrbpth",
   },
@@ -118,7 +119,7 @@ const albomData: Album[] = [
     img: AlbomWinnersGreenTree,
     title: "AlbomWinnersGreenTree",
     date: "19.09.2021",
-    label: "Balcosmos",
+    label: "Label - Balcosmos",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
   },
@@ -126,14 +127,14 @@ const albomData: Album[] = [
     img: AlbomWinnersSol,
     title: "Happiness Is your Decision",
     date: " Released December 26 2021",
-    label: "Label: Sol Music",
+    label: "Label - Sol Music",
     youtube: "https://www.youtube.com/watch?v=ctt1KGXUhNs",
   },
   {
     img: AlbomWinnersIono,
     title: "Insect in a Sect",
     date: "Released August 12 2021",
-    label: "Label: Iono Music ",
+    label: "Label - Iono Music ",
     youtube: "https://www.youtube.com/watch?v=9GaCzajhIKw",
   },
 ];
