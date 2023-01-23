@@ -35,14 +35,14 @@ export default function About() {
         <StyledTypographyTitle variant='h5'>BIOGRAPHY</StyledTypographyTitle>
         <StyledBodyBox>
           <Typography>
-            Originating from Ukraine, Alexey Romanov (38) is behind the solo
-            project “Balcosmos”. Influenced from a vast spectre of psytrance
-            sub-genres, including Goa, Forest, Fullon and Progressive, Alexey’s
-            initial Dj career evolved into the birth of his own music
-            productions under the project “Barbuix”. In 2017 he released his
-            debut album “Secret Ingredient” on the Russian based label Sound
-            Kitchen records and has since played on multiple parties and events
-            in countries such as Ukraine, Russia and Sweden.
+            Originating from Ukraine, Alexey Romanov is behind the solo project
+            “Balcosmos”. Influenced from a vast spectre of psytrance sub-genres,
+            including Goa, Forest, Fullon and Progressive, Alexey’s initial Dj
+            career evolved into the birth of his own music productions under the
+            project “Barbuix”. In 2017 he released his debut album “Secret
+            Ingredient” on the Russian based label Sound Kitchen records and has
+            since played on multiple parties and events in countries such as
+            Ukraine, Russia and Sweden.
           </Typography>
 
           <Typography>
