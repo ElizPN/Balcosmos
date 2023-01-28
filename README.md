@@ -1,5 +1,6 @@
+# Balcosmos official website
 
-
+Commercial project. Balcosmos Music Producer Website
 
 
 ## Technologies and libraries used: 
