@@ -1,4 +1,9 @@
 
+
+
+
+## Technologies and libraries used: 
+
 -  Language - [TypeScript](https://www.typescriptlang.org/)
 -  Client Framework - [React](https://reactjs.org)
 -  Styles - [Material UI](https://mui.com/)
