@@ -26,4 +26,4 @@ The website serves as an online platform to showcase the artist's portfolio, pro
 
 ## Live Project
 
-Check out the live project at [https://balcosmos.com/](https://balcosmos.com/).
+Check out the live project at [https://balcosmos.com/](https://balcosmos.com/)
