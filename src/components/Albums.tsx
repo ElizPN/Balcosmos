@@ -5,9 +5,9 @@ import AlbomSacred from "../images/albom_sacred_dope.jpeg";
 import AlbomSolitary from "../images/albom_solitary_oasis.jpeg";
 import AlbomSolmusic from "../images/albom_solmusic.jpeg";
 import AlbomSpaseBaby from "../images/albom_spase_baby.jpeg";
-import AlbomWinnersGreenTree from "../images/albom_winners_greenTree.jpeg";
-import AlbomWinnersSol from "../images/albom_winners_sol.jpeg";
-import AlbomWinnersIono from "../images/albom_winners_iono.jpeg";
+import MemoryHeap from "../images/memory-heapCove.jpg";
+import AlbomWinnersSol from "../images/albom_happiness.jpeg";
+import AlbomWinnersIono from "../images/sub_iono.jpg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -116,12 +116,12 @@ const albomData: Album[] = [
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSZalWJpEogk9yZ_yBOrbpth",
   },
   {
-    img: AlbomWinnersGreenTree,
-    title: "AlbomWinnersGreenTree",
-    date: "19.09.2021",
-    label: "Label - Balcosmos",
+    img: MemoryHeap,
+    title: "Memory heap",
+    date: "Released February 3, 2023",
+    label: "Label - Interface Records",
     youtube:
-      "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
+      "https://soundcloud.com/balcosmos/balcosmos-balcosmos-memory-heap-interface-records",
   },
   {
     img: AlbomWinnersSol,
