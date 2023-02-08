@@ -1,4 +1,10 @@
-import { Button, styled, TextareaAutosize, Typography } from "@mui/material";
+import {
+  Button,
+  styled,
+  TextareaAutosize,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import React from "react";
@@ -55,6 +61,7 @@ function ContactForm() {
         onSubmit={onSubmit}
         direction='column'
         spacing={7}
+        alignItems='center'
       >
         <Grid item>
           <Typography mb={2} variant='h5'>
@@ -62,7 +69,7 @@ function ContactForm() {
           </Typography>
           <TextareaAutosize
             minRows={3}
-            style={{ width: "50%", borderRadius: 5 }}
+            style={{ width: "100%", borderRadius: 5 }}
             placeholder='John Doe'
             name='name'
           />
@@ -73,12 +80,24 @@ function ContactForm() {
           </Typography>
           <TextareaAutosize
             minRows={3}
-            style={{ width: "50%", borderRadius: 5 }}
+            style={{ width: "100%", borderRadius: 5 }}
             placeholder='your@company.com'
             name='email'
           />
         </Grid>
-        <Grid item>
+        <Grid
+          alignItems='center'
+          justifyContent='center'
+          item
+          sx={{
+            width: {
+              xs: 300,
+              s: "50%",
+              md: "50%",
+              lg: "400px",
+            },
+          }}
+        >
           <Typography mb={2} variant='h5'>
             Message
           </Typography>
@@ -87,7 +106,7 @@ function ContactForm() {
             minRows={10}
             placeholder='Your message'
             name='message'
-            style={{ width: 400, borderRadius: 5 }}
+            style={{ width: "100%", borderRadius: 5 }}
           />
         </Grid>
         <Grid item>
