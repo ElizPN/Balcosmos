@@ -48,8 +48,9 @@ function ContactForm() {
         textAlign: "center",
         paddingBottom: 20,
         paddingTop: 5,
-        paddingLeft: 20,
-        paddingRight: 20,
+        // paddingLeft: 0,
+        // paddingRight: 0
+        
       }}
     >
       <StyledTypography variant='h5'>CONTACT</StyledTypography>
