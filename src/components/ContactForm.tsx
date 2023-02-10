@@ -71,7 +71,7 @@ function ContactForm() {
           </Typography>
           <TextareaAutosize
             minRows={3}
-            style={{ width: "100%", borderRadius: 5 }}
+            style={{ width: "100%", borderRadius: 5, padding: 10 }}
             placeholder='John Doe'
             name='name'
           />
@@ -92,7 +92,7 @@ function ContactForm() {
           </Typography>
           <TextareaAutosize
             minRows={3}
-            style={{ width: "100%", borderRadius: 5 }}
+            style={{ width: "100%", borderRadius: 5, padding: 10 }}
             placeholder='your@company.com'
             name='email'
           />
@@ -118,7 +118,7 @@ function ContactForm() {
             minRows={10}
             placeholder='Your message'
             name='message'
-            style={{ width: "100%", borderRadius: 5 }}
+            style={{ width: "100%", borderRadius: 5, padding: 10 }}
           />
         </Grid>
         <Grid item>
