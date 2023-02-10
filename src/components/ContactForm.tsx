@@ -1,9 +1,4 @@
-import {
-  Button,
-  styled,
-  TextareaAutosize,
-  Typography,
-} from "@mui/material";
+import { Button, styled, TextareaAutosize, Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import React from "react";
@@ -60,7 +55,17 @@ function ContactForm() {
         spacing={7}
         alignItems='center'
       >
-        <Grid item>
+        <Grid
+          item
+          sx={{
+            width: {
+              xs: "85%",
+              s: "50%",
+              md: "50%",
+              lg: "400px",
+            },
+          }}
+        >
           <Typography mb={2} variant='h5'>
             Your name
           </Typography>
@@ -71,7 +76,17 @@ function ContactForm() {
             name='name'
           />
         </Grid>
-        <Grid item>
+        <Grid
+          item
+          sx={{
+            width: {
+              xs: "85%",
+              s: "50%",
+              md: "50%",
+              lg: "400px",
+            },
+          }}
+        >
           <Typography mb={2} variant='h5'>
             Your email
           </Typography>
@@ -88,7 +103,7 @@ function ContactForm() {
           item
           sx={{
             width: {
-              xs: 300,
+              xs: "90%",
               s: "50%",
               md: "50%",
               lg: "400px",
