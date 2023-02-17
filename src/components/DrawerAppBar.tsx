@@ -140,9 +140,6 @@ export default function DrawerAppBar(props: Props) {
           variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          // ModalProps={{
-          //   keepMounted: true,
-          // }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
