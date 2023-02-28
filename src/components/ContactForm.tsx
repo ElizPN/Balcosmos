@@ -1,7 +1,7 @@
 import { Button, styled, TextareaAutosize, Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import React from "react";
+import React, { useState } from "react";
 
 const StyledTypography = styled(Typography)(() => ({
   fontWeight: "bold",
@@ -9,12 +9,12 @@ const StyledTypography = styled(Typography)(() => ({
 }));
 
 function ContactForm() {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
 
     formData.append("access_key", "01199e10-0cd4-40a9-a91c-4d94dec78c12");
 
