@@ -1,9 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.1ad7cd9a.css",
-    "main.js": "/static/js/main.d763eb11.js",
+    "main.js": "/static/js/main.08b41c47.js",
     "static/js/787.0af4a5a8.chunk.js": "/static/js/787.0af4a5a8.chunk.js",
     "static/media/background.jpg": "/static/media/background.90b4a834ac344e6786f8.jpg",
+    "static/media/album_turn_me_on.jpg": "/static/media/album_turn_me_on.e774c6648f4473c75d88.jpg",
+    "static/media/album_galactic_grovemaster.jpg": "/static/media/album_galactic_grovemaster.d60d7ec259c78bf20a3f.jpg",
+    "static/media/album_universe_beyond.jpg": "/static/media/album_universe_beyond.318cf5ccc1448232a9d4.jpg",
+    "static/media/album_peace_love_ukraine.jpg": "/static/media/album_peace_love_ukraine.c75ff8040620ce91ed2d.jpg",
     "static/media/albom_spase_baby.jpeg": "/static/media/albom_spase_baby.559a111f064a3a76cc46.jpeg",
     "static/media/albom_dharma_endpoint.jpeg": "/static/media/albom_dharma_endpoint.f871db7733e20abfc3bd.jpeg",
     "static/media/memory-heapCove.jpg": "/static/media/memory-heapCove.5cb03e66d33c81724d22.jpg",
@@ -16,11 +20,11 @@
     "static/media/albom_sacred_dope.jpeg": "/static/media/albom_sacred_dope.4056c780b62f34932918.jpeg",
     "index.html": "/index.html",
     "main.1ad7cd9a.css.map": "/static/css/main.1ad7cd9a.css.map",
-    "main.d763eb11.js.map": "/static/js/main.d763eb11.js.map",
+    "main.08b41c47.js.map": "/static/js/main.08b41c47.js.map",
     "787.0af4a5a8.chunk.js.map": "/static/js/787.0af4a5a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ad7cd9a.css",
-    "static/js/main.d763eb11.js"
+    "static/js/main.08b41c47.js"
   ]
 }
