@@ -81,6 +81,20 @@ const albomData: Album[] = [
       "https://www.youtube.com/watch?v=4erMKmKIGC8&list=PLKf7fie1PLSbx8UpA3_o_9KPKT7DK3iQw&index=2",
   },
   {
+    img: AlbumLoveUkraine,
+    title: "KimON",
+    date: "Release Date: May 12, 2023",
+    label: "Label - Skygravity records",
+    youtube: " https://www.youtube.com/watch?v=h_UlZpQy7mA",
+  },
+  {
+    img: AlbumGrovemaster,
+    title: "Galactic Groovemaster",
+    date: "Release Date: March 31, 2023",
+    label: "Label - Spiral Trax",
+    youtube: "https://www.youtube.com/watch?v=ZIX21g6lsQU",
+  },
+  {
     img: AlbomDharma,
     title: "Dharma endpoint",
     date: "Release Date: September 19, 2021",
@@ -90,13 +104,6 @@ const albomData: Album[] = [
   },
 
   {
-    img: AlbumGrovemaster,
-    title: "Galactic Groovemaster",
-    date: "Release Date: March 31, 2023",
-    label: "Label - Spiral Trax",
-    youtube: "https://www.youtube.com/watch?v=ZIX21g6lsQU",
-  },
-  {
     img: AlbomSolitary,
     title: "Solitary Oasis",
     date: "Release Date: January 6 2023",
@@ -104,15 +111,6 @@ const albomData: Album[] = [
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
   },
-
-  {
-    img: AlbumLoveUkraine,
-    title: "KimON",
-    date: "Release Date: May 12, 2023",
-    label: "Label - Skygravity records",
-    youtube: " https://www.youtube.com/watch?v=h_UlZpQy7mA",
-  },
-
   {
     img: AlbomSacred,
     title: "AlbomSacred",
