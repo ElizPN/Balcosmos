@@ -8,6 +8,10 @@ import AlbomSpaseBaby from "../images/albom_spase_baby.jpeg";
 import MemoryHeap from "../images/memory-heapCove.jpg";
 import AlbomWinnersSol from "../images/albom_happiness.jpeg";
 import AlbomWinnersIono from "../images/sub_iono.jpg";
+import AlbumGrovemaster from "../images/album_galactic_grovemaster.jpg";
+import AlbumLoveUkraine from "../images/album_peace_love_ukraine.jpg";
+import AlbumTurnMeOn from "../images/album_turn_me_on.jpg";
+import AlbumUniverseBeyond from "../images/album_universe_beyond.jpg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -69,12 +73,28 @@ const StyledGridItem = styled(Unstable_Grid2)(() => ({}));
 
 const albomData: Album[] = [
   {
+    img: AlbumUniverseBeyond,
+    title: "The Universe Beyond",
+    date: "Release Date: May 11, 2023",
+    label: "Label - Sol Music",
+    youtube:
+      "https://www.youtube.com/watch?v=4erMKmKIGC8&list=PLKf7fie1PLSbx8UpA3_o_9KPKT7DK3iQw&index=2",
+  },
+  {
     img: AlbomDharma,
     title: "Dharma endpoint",
-    date: "Released September 19, 2021",
+    date: "Release Date: September 19, 2021",
     label: "Label - Balcosmos",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
+  },
+
+  {
+    img: AlbumGrovemaster,
+    title: "Galactic Groovemaster",
+    date: "Release Date: March 31, 2023",
+    label: "Label - Spiral Trax",
+    youtube: "https://www.youtube.com/watch?v=ZIX21g6lsQU",
   },
   {
     img: AlbomSolitary,
@@ -83,6 +103,14 @@ const albomData: Album[] = [
     label: "Label - GreenTree Records",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
+  },
+
+  {
+    img: AlbumLoveUkraine,
+    title: "KimON",
+    date: "Release Date: May 12, 2023",
+    label: "Label - Skygravity records",
+    youtube: " https://www.youtube.com/watch?v=h_UlZpQy7mA",
   },
 
   {
@@ -115,6 +143,14 @@ const albomData: Album[] = [
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSZalWJpEogk9yZ_yBOrbpth",
   },
+  {
+    img: AlbumTurnMeOn,
+    title: "Turn Me On",
+    date: "Release Date: May 26, 2023",
+    label: "Label - Spiral Trax",
+    youtube: "https://www.youtube.com/watch?v=h_UlZpQy7mA",
+  },
+
   {
     img: MemoryHeap,
     title: "Memory heap",
