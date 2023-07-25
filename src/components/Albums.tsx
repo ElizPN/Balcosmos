@@ -146,7 +146,7 @@ const albomData: Album[] = [
     title: "Turn Me On",
     date: "Release Date: May 26, 2023",
     label: "Label - Spiral Trax",
-    youtube: "https://www.youtube.com/watch?v=h_UlZpQy7mA",
+    youtube: "https://youtu.be/6uT0PK7YdzM",
   },
 
   {
