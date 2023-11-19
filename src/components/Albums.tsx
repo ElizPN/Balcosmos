@@ -12,6 +12,8 @@ import AlbumGrovemaster from "../images/album_galactic_grovemaster.jpg";
 import AlbumLoveUkraine from "../images/album_peace_love_ukraine.jpg";
 import AlbumTurnMeOn from "../images/album_turn_me_on.jpg";
 import AlbumUniverseBeyond from "../images/album_universe_beyond.jpg";
+import AlbomFreeYourGhostages from "../images/albom_free_your.jpg";
+import AlbomBetterPlanet from "../images/albom_better_planet.jpg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -73,6 +75,23 @@ const StyledGridItem = styled(Unstable_Grid2)(() => ({}));
 
 const albomData: Album[] = [
   {
+    img: AlbomFreeYourGhostages,
+    title: "Free Your Ghostages",
+    date: "Release Date: Oct 19, 2023",
+    label: "Label - Spiral Trax",
+    youtube:
+      "https://www.youtube.com/watch?v=1Bpa4xxIs2U",
+  },
+    {
+    img: AlbomBetterPlanet,
+    title: "Better as a Planet",
+    date: "Release Date: Sep 27, 2023",
+    label: "Label - Fractal Records",
+    youtube:
+      "https://www.youtube.com/watch?v=Iu6gVZZZm68",
+  },
+  
+  {
     img: AlbumUniverseBeyond,
     title: "The Universe Beyond",
     date: "Release Date: May 11, 2023",
@@ -80,6 +99,7 @@ const albomData: Album[] = [
     youtube:
       "https://www.youtube.com/watch?v=4erMKmKIGC8&list=PLKf7fie1PLSbx8UpA3_o_9KPKT7DK3iQw&index=2",
   },
+
   {
     img: AlbumLoveUkraine,
     title: "KimON",
