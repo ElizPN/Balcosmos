@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1ad7cd9a.css",
-    "main.js": "/static/js/main.eddad6cf.js",
+    "main.js": "/static/js/main.a90396a8.js",
     "static/js/787.0af4a5a8.chunk.js": "/static/js/787.0af4a5a8.chunk.js",
     "static/media/albom_free_your.jpg": "/static/media/albom_free_your.fcfe9f69bb1d037c3a44.jpg",
     "static/media/background.jpg": "/static/media/background.90b4a834ac344e6786f8.jpg",
@@ -16,17 +16,18 @@
     "static/media/albom_solmusic.jpeg": "/static/media/albom_solmusic.85cdb2bbd0e4507db099.jpeg",
     "static/media/albom_solitary_oasis.jpeg": "/static/media/albom_solitary_oasis.ede1686bdb9168510bda.jpeg",
     "static/media/albom_ministry_of_apparatus.jpeg": "/static/media/albom_ministry_of_apparatus.bddda102ba0d6df5fa33.jpeg",
+    "static/media/album_feed_woolf.jpeg": "/static/media/album_feed_woolf.a63593ea609b5719c325.jpeg",
     "static/media/albom_happiness.jpeg": "/static/media/albom_happiness.1b898725b5d25cc3a771.jpeg",
     "static/media/sub_iono.jpg": "/static/media/sub_iono.14b5a8f5b20e99d51674.jpg",
     "static/media/logo-balcosmos.png": "/static/media/logo-balcosmos.db3a99a23ada946fb063.png",
     "static/media/albom_sacred_dope.jpeg": "/static/media/albom_sacred_dope.4056c780b62f34932918.jpeg",
     "index.html": "/index.html",
     "main.1ad7cd9a.css.map": "/static/css/main.1ad7cd9a.css.map",
-    "main.eddad6cf.js.map": "/static/js/main.eddad6cf.js.map",
+    "main.a90396a8.js.map": "/static/js/main.a90396a8.js.map",
     "787.0af4a5a8.chunk.js.map": "/static/js/787.0af4a5a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ad7cd9a.css",
-    "static/js/main.eddad6cf.js"
+    "static/js/main.a90396a8.js"
   ]
 }
