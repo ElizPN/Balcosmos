@@ -14,6 +14,7 @@ import AlbumTurnMeOn from "../images/album_turn_me_on.jpg";
 import AlbumUniverseBeyond from "../images/album_universe_beyond.jpg";
 import AlbomFreeYourGhostages from "../images/albom_free_your.jpg";
 import AlbomBetterPlanet from "../images/albom_better_planet.jpg";
+import FeedYourWoolf from "../images/album_feed_woolf.jpeg";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -82,7 +83,7 @@ const albomData: Album[] = [
     youtube:
       "https://www.youtube.com/watch?v=1Bpa4xxIs2U",
   },
-    {
+  {
     img: AlbomBetterPlanet,
     title: "Better as a Planet",
     date: "Release Date: Sep 27, 2023",
@@ -90,7 +91,15 @@ const albomData: Album[] = [
     youtube:
       "https://www.youtube.com/watch?v=Iu6gVZZZm68",
   },
-  
+  {
+    img: FeedYourWoolf,
+    title: "Feed Your Wolf",
+    date: "Release Date: Nov 13, 2023",
+    label: "Label - Sentimony Records",
+    youtube:
+      "https://www.youtube.com/watch?v=onltqi2mMK8  ",
+  },
+
   {
     img: AlbumUniverseBeyond,
     title: "The Universe Beyond",
