@@ -42,7 +42,8 @@ const style = {
   boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
   pt: 1,
   pl: 1,
-  cursor: "pointer"
+  cursor: "pointer",
+  mt: "10px"
 };
 
 const StyledImg = styled("img")(() => ({
