@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1ad7cd9a.css",
-    "main.js": "/static/js/main.a90396a8.js",
+    "main.js": "/static/js/main.3bdb8211.js",
     "static/js/787.0af4a5a8.chunk.js": "/static/js/787.0af4a5a8.chunk.js",
     "static/media/albom_free_your.jpg": "/static/media/albom_free_your.fcfe9f69bb1d037c3a44.jpg",
     "static/media/background.jpg": "/static/media/background.90b4a834ac344e6786f8.jpg",
@@ -23,11 +23,11 @@
     "static/media/albom_sacred_dope.jpeg": "/static/media/albom_sacred_dope.4056c780b62f34932918.jpeg",
     "index.html": "/index.html",
     "main.1ad7cd9a.css.map": "/static/css/main.1ad7cd9a.css.map",
-    "main.a90396a8.js.map": "/static/js/main.a90396a8.js.map",
+    "main.3bdb8211.js.map": "/static/js/main.3bdb8211.js.map",
     "787.0af4a5a8.chunk.js.map": "/static/js/787.0af4a5a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ad7cd9a.css",
-    "static/js/main.a90396a8.js"
+    "static/js/main.3bdb8211.js"
   ]
 }
