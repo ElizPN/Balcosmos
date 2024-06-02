@@ -21,6 +21,7 @@ import Typography from "@mui/material/Typography";
 import { Button, Unstable_Grid2, styled, Link } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import CloseIcon from '@mui/icons-material/Close';
 
 interface Album {
   img: string;
@@ -39,9 +40,9 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
-  pt: 10,
-  pl: 15,
-  p: 10,
+  pt: 1,
+  pl: 1,
+  cursor: "pointer"
 };
 
 const StyledImg = styled("img")(() => ({
@@ -242,12 +243,15 @@ export default function Albums() {
         >
           {modalData !== null ? (
             <Box sx={style}>
-              <Typography id='modal-modal-title' variant='h4' component='h2'>
+              <Box onClick={handleClose}>
+              <CloseIcon/>
+              </Box>
+              <Typography id='modal-modal-title' variant='h4' component='h2' margin="40px">
                 {modalData.title}
               </Typography>
               <Typography
                 id='modal-modal-description'
-                sx={{ mt: 2 }}
+                sx={{ mt: 2, mb: 6, ml: 5, mr: 5 }}
                 variant='h6'
               >
                 <Link href={modalData.youtube}>
