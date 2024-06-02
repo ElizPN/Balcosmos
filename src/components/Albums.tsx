@@ -160,7 +160,7 @@ const albomData: Album[] = [
     title: "Ringing blizzard",
     date: "Released November 10, 2021",
     label: "Label - Space Baby Records",
-    youtube: "https://www.youtube.com/watch?v=LT910zKihSQ",
+    youtube: "https://www.youtube.com/playlist?list=PLKf7fie1PLSay02EG9UBef25r_uyTIKL-",
   },
   {
     img: AlbomSolmusic,
