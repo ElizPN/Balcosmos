@@ -108,30 +108,30 @@ export default function Albums() {
                 sx={{ mt: 2, mb: 6, ml: 5, mr: 5 }}
                 variant='h6'
               >
-                <Link href={modalData.youtube}>
-                  <StyledImg
-                    src={modalData.img}
-                    sx={{
-                      width: {
-                        xs: "100%",
-                        s: "400px",
-                        md: "100%",
-                        lg: "400px",
-                      },
-                    }}
-                  />
-                </Link>
-                <p>{modalData.date}</p>
-                <p>{modalData.label}</p>
-                <Button
-                  color='inherit'
-                  href={modalData.youtube}
-                  target='_blank'
-                  variant='outlined'
-                  startIcon={<YouTubeIcon />}
-                >
-                  Listen on YouTube
-                </Button>
+  <Link href={modalData.youtube}>
+    <StyledImg
+      src={modalData.img}
+      sx={{
+        width: {
+          xs: "100%",
+          s: "400px",
+          md: "100%",
+          lg: "400px",
+        },
+      }}
+    />
+  </Link>
+  <p>Release Date: {modalData.date}</p>
+  <p>Label - {modalData.label}</p>
+  <Button
+    color='inherit'
+    href={modalData.youtube}
+    target='_blank'
+    variant='outlined'
+    startIcon={<YouTubeIcon />}
+  >
+    Listen on YouTube
+  </Button>
               </Typography>
             </Box>
           ) : (
