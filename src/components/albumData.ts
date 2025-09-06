@@ -35,14 +35,14 @@ export const albumData: Album[] = [
   {
     img: hypnoticRift,
     title: "Hypnotic Rift",
-    date: "May 2 2025",
+    date: "May 2, 2025",
     label: "Ovnimoon",
     youtube: "https://www.youtube.com/watch?v=YF-8oUAkqMc&list=PLKf7fie1PLSYrfafMrKkuK5IbQbO9700c",
   },
   {
     img: cosmicBalance,
     title: "Cosmic Balance",
-    date: "1.12.23",
+    date: "December 1, 2023",
     label: "Spiral Trax",
     youtube: "https://www.youtube.com/watch?v=fH4ekyymTo8&list=PLKf7fie1PLSZ3R7XfnGkEbLlOxMzgx9IF",
   },
@@ -77,21 +77,21 @@ export const albumData: Album[] = [
   {
     img: mandoviDreams,
     title: "Mandovi Dreams",
-    date: "23.05.25",
+    date: "May 23, 2025",
     label: "Ovnimoon",
     youtube: "https://www.youtube.com/watch?v=plIyQZR69x4&list=PLKf7fie1PLSaXat4POcHLDfDjib0eCLwd&index=2",
   },
   {
     img: metaphysicalFrequencies,
     title: "Metaphysical Frequencies",
-    date: "27.06.25",
+    date: "June 27, 2025",
     label: "Ovnimoon",
     youtube: "https://www.youtube.com/watch?v=RSvtOfX27fE&list=PLKf7fie1PLSaz8rY2xGfCYmqiE6feGKr8",
   },
   {
     img: albumFreeYourGhostages,
     title: "Free Your Ghostages",
-    date: "Oct 19, 2023",
+    date: "October 19, 2023",
     label: "Spiral Trax",
     youtube:
       "https://www.youtube.com/watch?v=1Bpa4xxIs2U",
@@ -99,7 +99,7 @@ export const albumData: Album[] = [
   {
     img: albumBetterPlanet,
     title: "Better as a Planet",
-    date: "Sep 27, 2023",
+    date: "September 27, 2023",
     label: "Fractal Records",
     youtube:
       "https://www.youtube.com/watch?v=Iu6gVZZZm68",
@@ -107,7 +107,7 @@ export const albumData: Album[] = [
   {
     img: FeedYourWoolf,
     title: "Feed Your Wolf",
-    date: "Nov 13, 2023",
+    date: "November 13, 2023",
     label: "Sentimony Records",
     youtube:
       "https://www.youtube.com/watch?v=onltqi2mMK8  ",
@@ -148,7 +148,7 @@ export const albumData: Album[] = [
   {
     img: albumSolitary,
     title: "Solitary Oasis",
-    date: "January 6 2023",
+    date: "January 6, 2023",
     label: "GreenTree Records",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
@@ -202,14 +202,14 @@ export const albumData: Album[] = [
   {
     img: albumWinnersSol,
     title: "Happiness Is your Decision",
-    date: "December 26 2021",
+    date: "December 26, 2021",
     label: "Sol Music",
     youtube: "https://www.youtube.com/watch?v=ctt1KGXUhNs",
   },
   {
     img: albumWinnersIono,
     title: "Insect in a Sect",
-    date: "August 12 2021",
+    date: "August 12, 2021",
     label: "Iono Music",
     youtube: "https://www.youtube.com/watch?v=9GaCzajhIKw",
   },
