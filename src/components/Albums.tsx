@@ -17,13 +17,16 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: { xs: "90%", md: "70%", lg: "60%" },
   maxWidth: "800px",
+  maxHeight: { xs: "90vh", md: "80vh" },
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
-  pt: 1,
-  pl: 1,
+  p: 1,
   cursor: "pointer",
-  mt: "10px"
+  mt: "10px",
+  display: "flex",
+  flexDirection: "column",
+  overflow: "auto"
 };
 
 const StyledImg = styled("img")(() => ({
@@ -121,8 +124,8 @@ export default function Albums() {
         >
           {modalData !== null ? (
             <Box sx={style}>
-              <Box onClick={handleClose}>
-              <CloseIcon/>
+              <Box onClick={handleClose} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <CloseIcon />
               </Box>
               <Typography id='modal-modal-title' variant='h4' component='h2' margin="40px">
                 {modalData.title}
@@ -132,15 +135,17 @@ export default function Albums() {
                 sx={{ mt: 2, mb: 6, ml: 5, mr: 5 }}
                 variant='h6'
               >
-  <iframe
-    src={getYouTubeEmbedUrl(modalData.youtube)}
-    width="100%"
-    height="400px"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    title={modalData.title}
-  ></iframe>
+                <Box sx={{ height: { xs: 250, md: 400 } }}>
+                  <iframe
+                    src={getYouTubeEmbedUrl(modalData.youtube)}
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title={modalData.title}
+                  ></iframe>
+                </Box>
   <p>Release Date: {modalData.date}</p>
   <p>Label - {modalData.label}</p>
   <Button
