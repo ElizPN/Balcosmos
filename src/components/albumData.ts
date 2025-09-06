@@ -1,18 +1,18 @@
-import AlbomDharma from "../images/albom_dharma_endpoint.jpeg";
-import AlbomMinistry from "../images/albom_ministry_of_apparatus.jpeg";
-import AlbomSacred from "../images/albom_sacred_dope.jpeg";
-import AlbomSolitary from "../images/albom_solitary_oasis.jpeg";
-import AlbomSolmusic from "../images/albom_solmusic.jpeg";
-import AlbomSpaseBaby from "../images/albom_spase_baby.jpeg";
+import albumDharma from "../images/album_dharma_endpoint.jpeg";
+import albumMinistry from "../images/album_ministry_of_apparatus.jpeg";
+import albumSacred from "../images/album_sacred_dope.jpeg";
+import albumSolitary from "../images/album_solitary_oasis.jpeg";
+import albumSolmusic from "../images/album_solmusic.jpeg";
+import albumSpaseBaby from "../images/album_spase_baby.jpeg";
 import MemoryHeap from "../images/memory-heapCove.jpg";
-import AlbomWinnersSol from "../images/albom_happiness.jpeg";
-import AlbomWinnersIono from "../images/sub_iono.jpg";
+import albumWinnersSol from "../images/album_happiness.jpeg";
+import albumWinnersIono from "../images/sub_iono.jpg";
 import AlbumGrovemaster from "../images/album_galactic_grovemaster.jpg";
 import AlbumLoveUkraine from "../images/album_peace_love_ukraine.jpg";
 import AlbumTurnMeOn from "../images/album_turn_me_on.jpg";
 import AlbumUniverseBeyond from "../images/album_universe_beyond.jpg";
-import AlbomFreeYourGhostages from "../images/albom_free_your.jpg";
-import AlbomBetterPlanet from "../images/albom_better_planet.jpg";
+import albumFreeYourGhostages from "../images/album_free_your.jpg";
+import albumBetterPlanet from "../images/album_better_planet.jpg";
 import FeedYourWoolf from "../images/album_feed_woolf.jpeg";
 
 export interface Album {
@@ -25,7 +25,7 @@ export interface Album {
 
 export const albumData: Album[] = [
   {
-    img: AlbomFreeYourGhostages,
+    img: albumFreeYourGhostages,
     title: "Free Your Ghostages",
     date: "Release Date: Oct 19, 2023",
     label: "Label - Spiral Trax",
@@ -33,7 +33,7 @@ export const albumData: Album[] = [
       "https://www.youtube.com/watch?v=1Bpa4xxIs2U",
   },
   {
-    img: AlbomBetterPlanet,
+    img: albumBetterPlanet,
     title: "Better as a Planet",
     date: "Release Date: Sep 27, 2023",
     label: "Label - Fractal Records",
@@ -73,7 +73,7 @@ export const albumData: Album[] = [
     youtube: "https://www.youtube.com/watch?v=ZIX21g6lsQU",
   },
   {
-    img: AlbomDharma,
+    img: albumDharma,
     title: "Dharma endpoint",
     date: "Release Date: September 19, 2021",
     label: "Label - Balcosmos",
@@ -82,7 +82,7 @@ export const albumData: Album[] = [
   },
 
   {
-    img: AlbomSolitary,
+    img: albumSolitary,
     title: "Solitary Oasis",
     date: "Release Date: January 6 2023",
     label: "Label - GreenTree Records",
@@ -90,29 +90,29 @@ export const albumData: Album[] = [
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSa0tsBfN2D5RwpnbFwYyN2E",
   },
   {
-    img: AlbomSacred,
-    title: "AlbomSacred",
+    img: albumSacred,
+    title: "albumSacred",
     date: "Released March 26, 2021",
     label: "Label - Balcosmos",
     youtube:
       "https://www.youtube.com/playlist?list=PLKf7fie1PLSbgKS4RFN0xCLONCzlhynw8",
   },
   {
-    img: AlbomMinistry,
+    img: albumMinistry,
     title: "Pleasure Controller",
     date: "Released November 17, 2022",
     label: "Label - UP!NOIZE Records",
     youtube: "https://www.youtube.com/watch?v=WtwFV5bYviI",
   },
   {
-    img: AlbomSpaseBaby,
+    img: albumSpaseBaby,
     title: "Ringing blizzard",
     date: "Released November 10, 2021",
     label: "Label - Space Baby Records",
     youtube: "https://www.youtube.com/playlist?list=PLKf7fie1PLSay02EG9UBef25r_uyTIKL-",
   },
   {
-    img: AlbomSolmusic,
+    img: albumSolmusic,
     title: "Projection Of Reality ",
     date: "Released August 26, 2022",
     label: "Label - Sol Music",
@@ -136,14 +136,14 @@ export const albumData: Album[] = [
       "https://soundcloud.com/balcosmos/balcosmos-balcosmos-memory-heap-interface-records",
   },
   {
-    img: AlbomWinnersSol,
+    img: albumWinnersSol,
     title: "Happiness Is your Decision",
     date: " Released December 26 2021",
     label: "Label - Sol Music",
     youtube: "https://www.youtube.com/watch?v=ctt1KGXUhNs",
   },
   {
-    img: AlbomWinnersIono,
+    img: albumWinnersIono,
     title: "Insect in a Sect",
     date: "Released August 12 2021",
     label: "Label - Iono Music ",
