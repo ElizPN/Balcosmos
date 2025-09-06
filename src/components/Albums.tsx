@@ -3,7 +3,7 @@ import { albumData, Album } from './albumData';
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, Unstable_Grid2, styled, Link } from "@mui/material";
+import { Button, Unstable_Grid2, styled } from "@mui/material";
 import "../App.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import CloseIcon from '@mui/icons-material/Close';
@@ -15,7 +15,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: { xs: "90%", md: "50%", lg: "35%" },
+  width: { xs: "90%", md: "70%", lg: "60%" },
+  maxWidth: "800px",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: "0px 0px 20px rgba(238, 231, 231, 0.855)",
@@ -63,6 +64,29 @@ const StyledModal = styled(Modal)`
   }
 `;
 
+const getYouTubeEmbedUrl = (url: string): string => {
+  try {
+    const urlObj = new URL(url);
+    if (urlObj.hostname === 'www.youtube.com' || urlObj.hostname === 'youtu.be') {
+      const videoId = urlObj.searchParams.get('v');
+      const listId = urlObj.searchParams.get('list');
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}${listId ? `?list=${listId}` : ''}`;
+      } else if (listId) {
+        return `https://www.youtube.com/embed/videoseries?list=${listId}`;
+      }
+    }
+    // Fallback for youtu.be short links
+    if (urlObj.hostname === 'youtu.be') {
+      const videoId = urlObj.pathname.slice(1);
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+  } catch (e) {
+    console.error('Invalid YouTube URL:', url);
+  }
+  return '';
+};
+
 export default function Albums() {
   const [open, setOpen] = React.useState(false);
   const [modalData, setModalData] = React.useState<Album | null>(null);
@@ -108,19 +132,15 @@ export default function Albums() {
                 sx={{ mt: 2, mb: 6, ml: 5, mr: 5 }}
                 variant='h6'
               >
-  <Link href={modalData.youtube}>
-    <StyledImg
-      src={modalData.img}
-      sx={{
-        width: {
-          xs: "100%",
-          s: "400px",
-          md: "100%",
-          lg: "400px",
-        },
-      }}
-    />
-  </Link>
+  <iframe
+    src={getYouTubeEmbedUrl(modalData.youtube)}
+    width="100%"
+    height="315"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    title={modalData.title}
+  ></iframe>
   <p>Release Date: {modalData.date}</p>
   <p>Label - {modalData.label}</p>
   <Button
