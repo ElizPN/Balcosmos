@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import DrawerAppBar from "./components/DrawerAppBar";
 import About from "./components/About";
 import Albums from "./components/Albums";
+import LiveAct from "./components/LiveAct";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
@@ -32,6 +33,7 @@ function App() {
         alignItems='center'
         direction='column'
       >
+        <LiveAct />
         <Albums />
         <About />
         <Listen />
