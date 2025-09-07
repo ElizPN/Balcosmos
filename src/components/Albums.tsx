@@ -38,13 +38,13 @@ const StyledImg = styled("img")(() => ({
 
 const StyledBoxContainer = styled(Box)(() => ({
   backgroundColor: "#000000cf",
-  scrollMarginTop: "500px",
+  scrollMarginTop: "200px",
   width: "90%",
   paddingTop: 20,
   paddingBottom: 30,
   paddingLeft: 35,
   paddingRight: 35,
-  marginTop: 200,
+  marginTop: '50px',
   textAlign: "center",
 }));
 
