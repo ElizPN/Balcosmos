@@ -9,6 +9,7 @@ import LiveAct from "./components/LiveAct";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const darkTheme = createTheme({
   palette: {
@@ -22,10 +23,10 @@ const darkTheme = createTheme({
   },
 });
 
-function App() {
+
+function MainContent() {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
+    <>
       <DrawerAppBar />
       <Grid
         container
@@ -39,6 +40,28 @@ function App() {
         <Listen />
         <ContactForm />
       </Grid>
+    </>
+  );
+}
+
+
+function ExternalRedirect({ to }: { to: string }) {
+  React.useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+  return null;
+}
+
+function App() {
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/epk" element={<ExternalRedirect to="https://e.pcloud.link/publink/show?code=kZItubZRl6DI304KCpdnSzfzz1WShbKYMqy#/filemanager?folder=5497700063" />} />
+          <Route path="/*" element={<MainContent />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
