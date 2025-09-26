@@ -9,7 +9,7 @@ import LiveAct from "./components/LiveAct";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 const darkTheme = createTheme({
   palette: {
@@ -56,12 +56,12 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/epk" element={<ExternalRedirect to="https://e.pcloud.link/publink/show?code=kZItubZRl6DI304KCpdnSzfzz1WShbKYMqy#/filemanager?folder=5497700063" />} />
           <Route path="/*" element={<MainContent />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
