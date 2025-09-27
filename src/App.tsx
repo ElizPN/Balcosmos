@@ -73,6 +73,28 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const y = rect.top + window.pageYOffset - 120;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Scroll on initial load
+    scrollToHash();
+
+    // Scroll on hash change
+    window.addEventListener('hashchange', scrollToHash);
+
+    return () => window.removeEventListener('hashchange', scrollToHash);
+  }, []);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />

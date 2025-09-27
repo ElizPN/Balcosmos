@@ -15,6 +15,7 @@ import Button from "@mui/material/Button";
 import LogoBalcosmos from "../images/logo-balcosmos.png";
 import SocialLinks from "./SocialLinks";
 import { Grid, styled } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const StyledBoxContainer = styled(Box)(() => ({
   alignItems: "justify",
@@ -45,11 +46,18 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = [
-  { name: "Releases", link: "#releases" },
-  { name: "Biography", link: "#biography" },
-  { name: "Listen", link: "#listen" },
-  { name: "Contact", link: "#contact" },
+  { name: "Releases", link: "releases" },
+  { name: "Biography", link: "biography" },
+  { name: "Listen", link: "listen" },
+  { name: "Contact", link: "contact" },
 ];
+
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -64,7 +72,15 @@ export default function DrawerAppBar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton href={item.link} sx={{ textAlign: "center" }}>
+            <ListItemButton
+              component="a"
+              href={"#" + item.link}
+              sx={{ textAlign: "center" }}
+              onClick={e => {
+                e.preventDefault();
+                scrollToSection(item.link);
+              }}
+            >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -92,13 +108,13 @@ export default function DrawerAppBar(props: Props) {
             component='div'
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <a href='./'>
+            <Link to="/">
               <StyledBoxLogo
                 component='img'
                 alt='LogoBalcosmos'
                 src={LogoBalcosmos}
               />
-            </a>
+            </Link>
           </Typography>
 
           <Grid
@@ -110,19 +126,26 @@ export default function DrawerAppBar(props: Props) {
             sx={{ display: { xs: "flex", sm: "none" } }}
           >
             <Grid item xs={12}>
-              <a href='./'>
+              <Link to="/">
                 <StyledBoxLogo
                   component='img'
                   alt='LogoBalcosmos'
                   src={LogoBalcosmos}
                 />
-              </a>
+              </Link>
             </Grid>
           </Grid>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <StyledButton key={item.name} href={item.link}>
+              <StyledButton
+                key={item.name}
+                href={"#" + item.link}
+                onClick={e => {
+                  e.preventDefault();
+                  scrollToSection(item.link);
+                }}
+              >
                 {item.name}
               </StyledButton>
             ))}
