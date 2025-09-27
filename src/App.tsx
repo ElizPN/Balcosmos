@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -10,6 +10,10 @@ import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
 import { HashRouter, Routes, Route } from "react-router-dom";
+
+declare global {
+  function gtag(...args: any[]): void;
+}
 
 const darkTheme = createTheme({
   palette: {
@@ -53,6 +57,22 @@ function ExternalRedirect({ to }: { to: string }) {
 }
 
 function App() {
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_path: window.location.pathname + window.location.search + window.location.hash,
+        });
+      }
+    };
+
+    window.addEventListener('hashchange', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange);
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
