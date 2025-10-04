@@ -6,6 +6,7 @@ import DrawerAppBar from "./components/DrawerAppBar";
 import About from "./components/About";
 import Albums from "./components/Albums";
 import Events from "./components/Events";
+import Merch from "./components/Merch";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
@@ -42,6 +43,7 @@ function MainContent() {
         <Albums />
         <About />
         <Listen />
+        <Merch />
         <ContactForm />
       </Grid>
     </>

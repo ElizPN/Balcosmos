@@ -50,6 +50,7 @@ const navItems = [
   { name: "Releases", link: "releases" },
   { name: "Biography", link: "biography" },
   { name: "Listen", link: "listen" },
+  { name: "Merch", link: "merch" },
   { name: "Contact", link: "contact" },
 ];
 

@@ -20,7 +20,7 @@ async def main():
             await expect(gallery_section).to_be_visible()
 
             # Take a screenshot of the gallery section
-            await gallery_section.screenshot(path="jules-scratch/verification/gallery_feature.png")
+            await page.screenshot(path="jules-scratch/verification/gallery_feature.png")
 
             print("Screenshot taken successfully.")
 
