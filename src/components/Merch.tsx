@@ -1,59 +1,34 @@
 import React from 'react';
-import { merchData, MerchItem } from './merchData';
-import { Box, Typography, Grid, Card, CardContent, CardMedia, Button, CardActions } from '@mui/material';
+import { Box, Typography, styled } from '@mui/material';
+
+const StyledBoxContainer = styled(Box)(() => ({
+  backgroundColor: "#000000cf",
+  width: "90%",
+  padding: 20,
+  marginTop: '0',
+  scrollMarginTop: "200px",
+  textAlign: "center",
+}));
+
+const StyledTypography = styled(Typography)(() => ({
+  fontWeight: "bold",
+  marginBottom: 20,
+}));
 
 const Merch: React.FC = () => {
   return (
-    <Box id="merch" sx={{ p: 3, color: 'white', width: '90%', scrollMarginTop: '100px', mt: 4, backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>
-      <Typography variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', color: '#FFD700', textAlign: 'center', mb: 4 }}>
-        Merchandise
-      </Typography>
-      <Grid container spacing={4} justifyContent="center">
-        {merchData.map((item: MerchItem, index: number) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-            <Card sx={{
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              color: 'white',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              height: '100%'
-            }}>
-              <CardMedia
-                component="img"
-                height="200"
-                image={item.imageUrl}
-                alt={item.name}
-                sx={{ objectFit: 'contain', pt: 2 }}
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h6" component="div">
-                  {item.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ color: 'lightgray' }}>
-                  ${item.price.toFixed(2)}
-                </Typography>
-              </CardContent>
-              <CardActions sx={{ justifyContent: 'center', pb: 2 }}>
-                <Button
-                  size="small"
-                  variant="contained"
-                  sx={{
-                    backgroundColor: '#FFD700',
-                    color: 'black',
-                    '&:hover': {
-                      backgroundColor: '#FFC700',
-                    },
-                  }}
-                >
-                  Buy Now
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+    <StyledBoxContainer id="merch">
+      <StyledTypography variant='h5'>MERCHANDISE</StyledTypography>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <iframe
+          style={{ borderRadius: '24px', border: 'none' }}
+          src="https://embed.creator-spring.com/widget?slug=balcosmos&per=29&currency=&page=1&layout=grid-sm-4&theme=light"
+          title="Balcosmos Merch store powered by Spring"
+          width="100%"
+          height="960"
+        ></iframe>
+      </div>
+    </StyledBoxContainer>
   );
 };
 
