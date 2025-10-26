@@ -39,7 +39,7 @@ function ContactForm() {
         backgroundColor: "#000000cf",
         direction: "column",
         marginBottom: 50,
-        scrollMarginTop: 200,
+        scrollMarginTop: { xs: 200, sm: 160 },
         textAlign: "center",
         paddingBottom: 20,
         paddingTop: 5,

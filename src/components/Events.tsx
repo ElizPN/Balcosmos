@@ -34,7 +34,10 @@ const EventCard = styled(Box)(() => ({
 
 const Events: React.FC = () => {
   return (
-    <StyledBoxContainer id="events">
+    <StyledBoxContainer 
+      id="events"
+      sx={{ scrollMarginTop: { xs: '200px', sm: '160px' } }}
+    >
       <StyledTypography variant='h5'>TOUR DATES</StyledTypography>
       <StyledGridContainer container spacing={1}>
         {[...events]

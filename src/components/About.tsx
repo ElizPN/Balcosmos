@@ -30,7 +30,11 @@ const StyledBodyBox = styled(Box)(() => ({
 
 export default function About() {
   return (
-    <StyledGridContainer container id='biography'>
+    <StyledGridContainer 
+      container 
+      id='biography'
+      sx={{ scrollMarginTop: { xs: '200px', sm: '160px' } }}
+    >
       <StyledGridItem item>
         <StyledTypographyTitle variant='h5'>BIOGRAPHY</StyledTypographyTitle>
         <StyledBodyBox>

@@ -17,7 +17,10 @@ const StyledTypography = styled(Typography)(() => ({
 
 const Merch: React.FC = () => {
   return (
-    <StyledBoxContainer id="merch">
+    <StyledBoxContainer 
+      id="merch"
+      sx={{ scrollMarginTop: { xs: '200px', sm: '160px' } }}
+    >
       <StyledTypography variant='h5'>MERCHANDISE</StyledTypography>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <iframe
