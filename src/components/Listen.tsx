@@ -24,7 +24,12 @@ function Listen() {
   return (
     <StyledBoxContainer>
       <StyledTypography variant='h5'>LISTEN</StyledTypography>
-      <StyledGridContainer container  spacing={2} id='listen'>
+      <StyledGridContainer 
+        container  
+        spacing={2} 
+        id='listen'
+        sx={{ scrollMarginTop: { xs: '200px', sm: '160px' } }}
+      >
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <iframe
             title='YouTube'

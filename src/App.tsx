@@ -38,7 +38,9 @@ function MainContent() {
         justifyContent='center'
         alignItems='center'
         direction='column'
-        sx={{ mt: '160px' }}
+        sx={{ 
+          mt: { xs: '200px', sm: '160px' }
+        }}
       >
         <Events />
         <Albums />
@@ -83,7 +85,9 @@ function App() {
         const element = document.getElementById(hash.substring(1));
         if (element) {
           const rect = element.getBoundingClientRect();
-          const y = rect.top + window.pageYOffset - 120;
+          // Adjust offset based on screen size: mobile (200px) or desktop (160px)
+          const offset = window.innerWidth < 600 ? 200 : 160;
+          const y = rect.top + window.pageYOffset - offset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
       }

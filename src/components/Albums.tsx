@@ -97,7 +97,10 @@ export default function Albums() {
   const handleClose = () => setOpen(false);
 
   return (
-    <StyledBoxContainer id='releases'>
+    <StyledBoxContainer 
+      id='releases'
+      sx={{ scrollMarginTop: { xs: '200px', sm: '160px' } }}
+    >
       <StyledTypography variant='h5'>RELEASES</StyledTypography>
       <StyledGridContainer container spacing={5}>
         {albumData.map((item) => (
