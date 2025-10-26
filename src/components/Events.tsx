@@ -1,66 +1,102 @@
 import React from 'react';
 import { events, Event } from './eventData';
-import { Box, Typography, List, ListItem, ListItemText, Button, Paper, Divider } from '@mui/material';
+import { Box, Typography, Button, Grid, styled } from '@mui/material';
+
+const StyledBoxContainer = styled(Box)(() => ({
+  backgroundColor: "#000000cf",
+  width: "90%",
+  padding: 20,
+  marginTop: '50px',
+  scrollMarginTop: "200px",
+  textAlign: "center",
+}));
+
+const StyledTypography = styled(Typography)(() => ({
+  fontWeight: "bold",
+  marginBottom: 20,
+}));
+
+const StyledGridContainer = styled(Grid)(() => ({
+  justifyContent: "center",
+  marginTop: 15,
+}));
+
+const EventCard = styled(Box)(() => ({
+  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+  borderRadius: '8px',
+  padding: '12px',
+  margin: 0,
+  textAlign: 'left',
+  '&:hover': {
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+  },
+}));
 
 const Events: React.FC = () => {
   return (
-    <Box id="events" sx={{ p: 3, color: 'white', width: '90%', scrollMarginTop: '200px' }}>
-      <Typography variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', color: '#FFD700' }}>
-        Tour Dates
-      </Typography>
-      <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-        <List>
-          {events.map((event: Event, index: number) => (
-            <React.Fragment key={index}>
-              <ListItem
-                sx={{
-                  flexDirection: { xs: 'column', sm: 'row' },
-                  alignItems: { xs: 'flex-start', sm: 'center' },
-                  py: 2,
-                }}
-              >
-                <ListItemText
-                  primary={
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'white' }}>
+    <StyledBoxContainer id="events">
+      <StyledTypography variant='h5'>TOUR DATES</StyledTypography>
+      <StyledGridContainer container spacing={1}>
+        {[...events]
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((event: Event, index: number) => (
+            <Grid item xs={12} sm={12} md={10} lg={8} key={index}>
+              <EventCard>
+                <Grid container spacing={2} alignItems="center">
+                  <Grid item xs={12} sm={8}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'white', marginBottom: 0.5 }}>
                       {event.date}
                     </Typography>
-                  }
-                  secondary={
                     <Typography variant="body1" sx={{ color: 'lightgray' }}>
-                      {event.location} - {event.venue}
+                      {event.name || 'TBA'} - {event.location}
                     </Typography>
-                  }
-                  sx={{ flex: '1 1 auto', mb: { xs: 2, sm: 0 } }}
-                />
-                {event.ticketsUrl ? (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    href={event.ticketsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      backgroundColor: '#FFD700',
-                      color: 'black',
-                      '&:hover': {
-                        backgroundColor: '#FFC700',
-                      },
-                    }}
-                  >
-                    Buy Tickets
-                  </Button>
-                ) : (
-                  <Button variant="outlined" disabled>
-                    Coming Soon
-                  </Button>
-                )}
-              </ListItem>
-              {index < events.length - 1 && <Divider sx={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />}
-            </React.Fragment>
+                  </Grid>
+                  <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
+                    {event.ticketsUrl ? (
+                      (() => {
+                        const currentDate = new Date();
+                        const eventDate = new Date(event.date);
+                        const isPastEvent = eventDate < currentDate;
+
+                        return (
+                          <Button
+                            variant="contained"
+                            href={event.ticketsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{
+                              backgroundColor: '#FFD700',
+                              color: 'black',
+                              '&:hover': {
+                                backgroundColor: '#FFC700',
+                              },
+                              minWidth: '120px',
+                            }}
+                          >
+                            {isPastEvent ? 'Event Info' : 'Buy Tickets'}
+                          </Button>
+                        );
+                      })()
+                    ) : (
+                      (() => {
+                        const currentDate = new Date();
+                        const eventDate = new Date(event.date);
+                        const isPastEvent = eventDate < currentDate;
+
+                        return (
+                          <Button variant="outlined" disabled sx={{ minWidth: '120px' }}>
+                            {isPastEvent ? 'Past Event' : 'Coming Soon'}
+                          </Button>
+                        );
+                      })()
+                    )}
+                  </Grid>
+                </Grid>
+              </EventCard>
+            </Grid>
           ))}
-        </List>
-      </Paper>
-    </Box>
+      </StyledGridContainer>
+    </StyledBoxContainer>
   );
 };
 

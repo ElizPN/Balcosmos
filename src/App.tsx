@@ -38,6 +38,7 @@ function MainContent() {
         justifyContent='center'
         alignItems='center'
         direction='column'
+        sx={{ mt: '160px' }}
       >
         <Events />
         <Albums />
