@@ -6,13 +6,13 @@ import React from "react";
 const StyledBoxContainer = styled(Box)(() => ({
   backgroundColor: "#000000cf",
   padding: 40,
-  marginBottom: 100,
+  marginBottom: 30,
   textAlign: "center",
 }));
 
 const StyledTypography = styled(Typography)(() => ({
   fontWeight: "bold",
-  marginBottom: 30,
+  marginBottom: 20,
 }));
 
 const StyledGridContainer = styled(Grid)(() => ({
