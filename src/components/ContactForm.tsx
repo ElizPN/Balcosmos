@@ -1,6 +1,13 @@
-import { Button, styled, TextareaAutosize, Typography } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  Snackbar,
+  styled,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import React, { useState } from "react";
 
 const StyledTypography = styled(Typography)(() => ({
@@ -8,8 +15,32 @@ const StyledTypography = styled(Typography)(() => ({
   marginBottom: 70,
 }));
 
+const StyledTextField = styled(TextField)({
+  "& .MuiInputBase-root": {
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
+  },
+  "& label": {
+    color: "black",
+  },
+});
+
 function ContactForm() {
   const [result, setResult] = useState("");
+  const [open, setOpen] = useState(false);
+  const [alert, setAlert] = useState({
+    severity: "success",
+    message: "",
+  });
+
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -23,12 +54,14 @@ function ContactForm() {
       body: formData,
     }).then((res) => res.json());
 
+    setResult("");
     if (res.success) {
-      console.log("Success", res);
-      setResult(res.message);
+      setAlert({ severity: "success", message: "Message sent successfully!" });
+      setOpen(true);
+      (event.target as HTMLFormElement).reset();
     } else {
-      console.log("Error", res);
-      setResult(res.message);
+      setAlert({ severity: "error", message: "Something went wrong!" });
+      setOpen(true);
     }
   };
 
@@ -46,95 +79,54 @@ function ContactForm() {
       }}
     >
       <StyledTypography variant='h5'>CONTACT</StyledTypography>
-
-      <Grid
-        container
+      <Box
         component='form'
         onSubmit={onSubmit}
-        direction='column'
-        spacing={7}
-        alignItems='center'
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          "& .MuiTextField-root": {
+            m: 1,
+            width: { xs: "85%", sm: "50%", md: "400px" },
+          },
+        }}
+        noValidate
+        autoComplete='off'
       >
-        <Grid
-          item
-          sx={{
-            width: {
-              xs: "85%",
-              s: "50%",
-              md: "50%",
-              lg: "400px",
-            },
-          }}
+        <StyledTextField fullWidth label='Your Name' name='name' />
+        <StyledTextField
+          fullWidth
+          label='Your Email'
+          name='email'
+          type='email'
+        />
+        <StyledTextField
+          fullWidth
+          label='Message'
+          name='message'
+          multiline
+          rows={4}
+        />
+        <Button
+          color='success'
+          size='large'
+          variant='contained'
+          type='submit'
+          sx={{ mt: 3 }}
         >
-          <Typography mb={2} variant='h5'>
-            Your name
-          </Typography>
-          <TextareaAutosize
-            minRows={3}
-            style={{ width: "100%", borderRadius: 5, padding: 10 }}
-            placeholder='John Doe'
-            name='name'
-          />
-        </Grid>
-        <Grid
-          item
-          sx={{
-            width: {
-              xs: "85%",
-              s: "50%",
-              md: "50%",
-              lg: "400px",
-            },
-          }}
+          {result ? result : "Submit"}
+        </Button>
+      </Box>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity={alert.severity as "success" | "error"}
+          sx={{ width: "100%" }}
         >
-          <Typography mb={2} variant='h5'>
-            Your email
-          </Typography>
-          <TextareaAutosize
-            minRows={3}
-            style={{ width: "100%", borderRadius: 5, padding: 10 }}
-            placeholder='your@company.com'
-            name='email'
-          />
-        </Grid>
-        <Grid
-          alignItems='center'
-          justifyContent='center'
-          item
-          sx={{
-            width: {
-              xs: "90%",
-              s: "50%",
-              md: "50%",
-              lg: "400px",
-            },
-          }}
-        >
-          <Typography mb={2} variant='h5'>
-            Message
-          </Typography>
-          <TextareaAutosize
-            aria-label='Your message'
-            minRows={10}
-            placeholder='Your message'
-            name='message'
-            style={{ width: "100%", borderRadius: 5, padding: 10 }}
-          />
-        </Grid>
-        <Grid item>
-          <Button
-            color='success'
-            size='large'
-            variant='contained'
-            type='submit'
-          >
-            Submit
-          </Button>
-        </Grid>
-        <Grid item>
-          <Typography>{result}</Typography>
-        </Grid>
-      </Grid>
+          {alert.message}
+        </Alert>
+      </Snackbar>
     </Container>
   );
 }
