@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1ad7cd9a.css",
-    "main.js": "/static/js/main.e8d77e76.js",
+    "main.css": "/static/css/main.1db134aa.css",
+    "main.js": "/static/js/main.4800ff47.js",
     "static/js/787.0af4a5a8.chunk.js": "/static/js/787.0af4a5a8.chunk.js",
     "static/media/album_free_your.jpg": "/static/media/album_free_your.fcfe9f69bb1d037c3a44.jpg",
     "static/media/background.jpg": "/static/media/background.90b4a834ac344e6786f8.jpg",
@@ -30,12 +30,12 @@
     "static/media/album_sacred_dope.jpeg": "/static/media/album_sacred_dope.4056c780b62f34932918.jpeg",
     "static/media/cosmic_balance.jpg": "/static/media/cosmic_balance.20db1b76bbe85e8c608a.jpg",
     "index.html": "/index.html",
-    "main.1ad7cd9a.css.map": "/static/css/main.1ad7cd9a.css.map",
-    "main.e8d77e76.js.map": "/static/js/main.e8d77e76.js.map",
+    "main.1db134aa.css.map": "/static/css/main.1db134aa.css.map",
+    "main.4800ff47.js.map": "/static/js/main.4800ff47.js.map",
     "787.0af4a5a8.chunk.js.map": "/static/js/787.0af4a5a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ad7cd9a.css",
-    "static/js/main.e8d77e76.js"
+    "static/css/main.1db134aa.css",
+    "static/js/main.4800ff47.js"
   ]
 }
