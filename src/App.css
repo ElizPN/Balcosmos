@@ -5,3 +5,22 @@ body {
   background-attachment: fixed;
   background-size: auto;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 9999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
