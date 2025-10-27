@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -62,8 +63,35 @@ function scrollToSection(id: string) {
 }
 
 export default function DrawerAppBar(props: Props) {
-  const { window } = props;
+  const { window: windowProp } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map((item) =>
+        document.getElementById(item.link)
+      );
+      const scrollPosition = window.scrollY;
+
+      for (const section of sections) {
+        if (section) {
+          const sectionTop = section.offsetTop - 200;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            setActiveLink(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -77,7 +105,10 @@ export default function DrawerAppBar(props: Props) {
             <ListItemButton
               component="a"
               href={"#" + item.link}
-              sx={{ textAlign: "center" }}
+              sx={{
+                textAlign: "center",
+                color: activeLink === item.link ? "secondary.main" : "",
+              }}
               onClick={e => {
                 e.preventDefault();
                 scrollToSection(item.link);
@@ -92,7 +123,7 @@ export default function DrawerAppBar(props: Props) {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    windowProp !== undefined ? () => windowProp().document.body : undefined;
 
   return (
     <StyledBoxContainer>
@@ -143,6 +174,9 @@ export default function DrawerAppBar(props: Props) {
               <StyledButton
                 key={item.name}
                 href={"#" + item.link}
+                sx={{
+                  color: activeLink === item.link ? "secondary.main" : "",
+                }}
                 onClick={e => {
                   e.preventDefault();
                   scrollToSection(item.link);
