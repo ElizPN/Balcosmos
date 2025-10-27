@@ -10,6 +10,7 @@ import Merch from "./components/Merch";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
+import BackToTop from "./components/BackToTop";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 declare global {
@@ -31,14 +32,14 @@ const darkTheme = createTheme({
 
 function MainContent() {
   return (
-    <>
+    <main>
       <DrawerAppBar />
       <Grid
         container
         justifyContent='center'
         alignItems='center'
         direction='column'
-        sx={{ 
+        sx={{
           mt: { xs: '200px', sm: '160px' }
         }}
       >
@@ -49,7 +50,7 @@ function MainContent() {
         <Merch />
         <ContactForm />
       </Grid>
-    </>
+    </main>
   );
 }
 
@@ -110,6 +111,7 @@ function App() {
           <Route path="/epk" element={<ExternalRedirect to="https://e.pcloud.link/publink/show?code=kZItubZRl6DI304KCpdnSzfzz1WShbKYMqy#/filemanager?folder=5497700063" />} />
           <Route path="/*" element={<MainContent />} />
         </Routes>
+        <BackToTop />
       </HashRouter>
     </ThemeProvider>
   );
