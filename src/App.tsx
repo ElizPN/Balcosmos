@@ -9,6 +9,7 @@ import LiveAct from "./components/LiveAct";
 import Grid from "@mui/material/Grid";
 import Listen from "./components/Listen";
 import ContactForm from "./components/ContactForm";
+import BackToTop from "./components/BackToTop";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 declare global {
@@ -103,6 +104,7 @@ function App() {
           <Route path="/epk" element={<ExternalRedirect to="https://e.pcloud.link/publink/show?code=kZItubZRl6DI304KCpdnSzfzz1WShbKYMqy#/filemanager?folder=5497700063" />} />
           <Route path="/*" element={<MainContent />} />
         </Routes>
+        <BackToTop />
       </HashRouter>
     </ThemeProvider>
   );
