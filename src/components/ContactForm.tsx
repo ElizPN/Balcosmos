@@ -10,9 +10,12 @@ import {
 import Container from "@mui/material/Container";
 import React, { useState } from "react";
 
-const StyledTypography = styled(Typography)(() => ({
+const StyledTypography = styled(Typography)(({ theme }) => ({
   fontWeight: "bold",
   marginBottom: 70,
+  [theme.breakpoints.down("sm")]: {
+    marginBottom: 5,
+  },
 }));
 
 const StyledTextField = styled(TextField)({
@@ -74,6 +77,7 @@ function ContactForm() {
         marginBottom: 50,
         scrollMarginTop: { xs: 200, sm: 160 },
         textAlign: "center",
+        paddingTop: 15,
         paddingBottom: 20,
       }}
     >
