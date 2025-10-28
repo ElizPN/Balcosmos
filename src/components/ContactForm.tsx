@@ -42,7 +42,6 @@ function ContactForm() {
         scrollMarginTop: { xs: 200, sm: 160 },
         textAlign: "center",
         paddingBottom: 20,
-        paddingTop: 5,
       }}
     >
       <StyledTypography variant='h5'>CONTACT</StyledTypography>

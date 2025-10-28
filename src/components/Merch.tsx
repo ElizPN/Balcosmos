@@ -5,7 +5,7 @@ const StyledBoxContainer = styled(Box)(() => ({
   backgroundColor: "#000000cf",
   width: "90%",
   padding: 20,
-  marginTop: '0',
+  marginBottom: 50,
   scrollMarginTop: "200px",
   textAlign: "center",
 }));
